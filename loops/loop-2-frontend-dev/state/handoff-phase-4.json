@@ -1,0 +1,21 @@
+{
+  "loop": "frontend-dev",
+  "phase": 4,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "ui_url": "http://localhost:4200",
+  "phase_file": "loops/loop-2-frontend-dev/outputs/phase-4-frontend.md",
+  "client_generated_from": "backend/openapi/openapi.json",
+  "tasks_done": [
+    "T058",
+    "T059",
+    "T060",
+    "T061"
+  ],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T20:11:49+03:00",
+  "ended": "2026-10-03T20:19:02+03:00",
+  "notes": "Learning Resources page done: store (generated LearningService, optimistic toggle/remove with rollback, RefreshService bump), form dialog (manual status in edit mode, sent only when changed), card grid with expand/collapse height animation, milestones (strike-through, target date) and notes child components. ng build passes (only the existing habit-card budget warning); 88/88 existing unit tests pass; 16 Playwright checks pass against the real backend. Test data cleaned up (learning-cards list is empty)."
+}

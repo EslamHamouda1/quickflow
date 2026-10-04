@@ -1,0 +1,26 @@
+{
+  "loop": "backend-dev",
+  "phase": 4,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "backend_url": "http://localhost:8080",
+  "swagger_url": "http://localhost:8080/v3/api-docs",
+  "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+  "swagger_file": "backend/openapi/openapi.json",
+  "phase_file": "loops/loop-1-backend-dev/outputs/phase-4-backend.md",
+  "tasks_done": [
+    "T051",
+    "T052",
+    "T053",
+    "T054",
+    "T055",
+    "T056",
+    "T057"
+  ],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T20:05:59+03:00",
+  "ended": "2026-10-03T20:11:27+03:00",
+  "notes": "10 Learning operations (/api/learning-cards, /{id}, /{id}/milestones[/{milestoneId}], /{id}/notes[/{noteId}]) match contracts/openapi.yaml (paths, operationIds, statuses, schemas, required lists). mvnw verify + openapi pass. 61/61 learning curl checks; Tasks 47/47 and Habits 46/46 regression pass. Status recomputed only on milestone add/delete/done-toggle; manual status kept otherwise; no milestones -> status unchanged. Backend running on :8080."
+}

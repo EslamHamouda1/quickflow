@@ -1,0 +1,103 @@
+// Motion tokens. Every duration is <= 250 ms so animation never blocks input.
+:root {
+  --duration-instant: 80ms;
+  --duration-fast: 140ms;
+  --duration-base: 200ms;
+  --duration-slow: 250ms;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes qf-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes qf-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes qf-slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes qf-slide-down-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(8px); }
+}
+
+@keyframes qf-slide-in-right {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes qf-slide-out-right {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(24px); }
+}
+
+@keyframes qf-scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes qf-scale-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+
+@keyframes qf-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+@keyframes qf-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 45%, transparent); }
+  100% { box-shadow: 0 0 0 10px transparent; }
+}
+
+@keyframes qf-shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+// Utility classes for animate.enter / animate.leave
+.qf-enter-fade { animation: qf-fade-in var(--duration-base) var(--ease-out) both; }
+.qf-leave-fade { animation: qf-fade-out var(--duration-fast) var(--ease-in) both; }
+.qf-enter-slide { animation: qf-slide-up var(--duration-base) var(--ease-out) both; }
+.qf-leave-slide { animation: qf-slide-down-out var(--duration-fast) var(--ease-in) both; }
+.qf-enter-scale { animation: qf-scale-in var(--duration-base) var(--ease-out) both; }
+.qf-leave-scale { animation: qf-scale-out var(--duration-fast) var(--ease-in) both; }
+.qf-pop { animation: qf-pop var(--duration-slow) var(--ease-spring); }
+
+// Route change cross-fade (router withViewTransitions)
+::view-transition-old(root) {
+  animation: qf-fade-out var(--duration-fast) var(--ease-in) both;
+}
+::view-transition-new(root) {
+  animation: qf-slide-up var(--duration-base) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

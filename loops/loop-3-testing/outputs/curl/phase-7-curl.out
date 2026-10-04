@@ -1,0 +1,27 @@
+BE-001 | 200 | 200 | PASS | all required fields, ct=application/json
+BE-002 | 2026-10-04 | 2026-10-04 | PASS | today = server local date
+BE-003 | Friend | Friend | PASS | greetingName = Settings displayName
+BE-004 | 200 | 200 | PASS | baseline: dashboard==lists {"tasks":{"dueToday":[77],"overdue":[37,74,75],"completedTodayCount":1,"totalActive":9,"doneCount":5,"completionPercent":56},"habits":{"today":[28,31,34],"activeCount":3,"completedTodayCount":2},"plans":{"inProgress":[20],"upcomingCount":1,"completedCount":4},"learning":{"cardsTotal":2,"inProgressCount":0,"milestonesTotal":0,"milestonesDone":0,"milestonesCompletedLast7Days":0}}
+      seeded: tasks 86 87 88(archived) 89(done) habits 39 40(inactive) card 21 (m 22) plans 31 32
+BE-005 | 1 | 1 | PASS | dueToday has 86, not archived 88 / done 89
+BE-006 | 4 | 4 | PASS | overdue +1 (87)
+BE-007 | 12 | 12 | PASS | totalActive +3 (archived excluded)
+BE-008 | 6/2 | 6/2 | PASS | doneCount +1, completedTodayCount +1
+BE-009 | 4 | 4 | PASS | active habits +1, inactive excluded
+BE-010 | 31 | 31 | PASS | priority 1 plan first, rest ~50 min, upcoming +1
+BE-011 | 3/2 | 3/2 | PASS | cardsTotal +1, milestonesTotal +2
+BE-012 | 200 | 200 | PASS | after seed: dashboard==lists {"tasks":{"dueToday":[77,86],"overdue":[37,74,75,87],"completedTodayCount":2,"totalActive":12,"doneCount":6,"completionPercent":50},"habits":{"today":[28,31,34,39],"activeCount":4,"completedTodayCount":2},"plans":{"inProgress":[31,20],"upcomingCount":2,"completedCount":4},"learning":{"cardsTotal":3,"inProgressCount":0,"milestonesTotal":2,"milestonesDone":0,"milestonesCompletedLast7Days":0}}
+BE-013 | 0 | 0 | PASS | complete task → leaves dueToday, done +1, completedToday +1
+BE-014 | 3 | 3 | PASS | habit completion → completedTodayCount +1
+BE-015 | 1/1/1 | 1/1/1 | PASS | milestone done → done +1, last7 +1, card IN_PROGRESS
+BE-016a | 50 | 50 | PASS | one of two items done → progressPercent 50 on dashboard
+BE-016 | COMPLETED | COMPLETED | PASS | all plan items done → plan leaves inProgress, completedCount +1
+BE-017 | 200 | 200 | PASS | after changes: dashboard==lists {"tasks":{"dueToday":[77],"overdue":[37,74,75,87],"completedTodayCount":3,"totalActive":12,"doneCount":7,"completionPercent":58},"habits":{"today":[28,31,34,39],"activeCount":4,"completedTodayCount":3},"plans":{"inProgress":[20],"upcomingCount":2,"completedCount":5},"learning":{"cardsTotal":3,"inProgressCount":1,"milestonesTotal":2,"milestonesDone":1,"milestonesCompletedLast7Days":1}}
+BE-018 | 405 | 405 | PASS | POST → 405 problem+json
+BE-019 | 405 | 405 | PASS | PUT → 405
+BE-020 | 405 | 405 | PASS | DELETE → 405
+BE-021 | 404 | 404 | PASS | unknown sub-path → 404 problem+json
+BE-022 | getDashboard|200|Dashboard | getDashboard|200|Dashboard | PASS | operation + required lists of all Dashboard schemas
+BE-023 | 200 | 200 | PASS | after cleanup: dashboard==lists {"tasks":{"dueToday":[77],"overdue":[37,74,75],"completedTodayCount":1,"totalActive":9,"doneCount":5,"completionPercent":56},"habits":{"today":[28,31,34],"activeCount":3,"completedTodayCount":2},"plans":{"inProgress":[20],"upcomingCount":1,"completedCount":4},"learning":{"cardsTotal":2,"inProgressCount":0,"milestonesTotal":0,"milestonesDone":0,"milestonesCompletedLast7Days":0}}
+BE-024 | [9,5,3,2] | [9,5,3,2] | PASS | back to baseline
+TOTAL pass=25 fail=0

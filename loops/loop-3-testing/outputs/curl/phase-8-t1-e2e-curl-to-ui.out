@@ -1,0 +1,10 @@
+# curl -X POST http://localhost:8080/api/tasks (P8R1C curl task due today)
+ 201
+# curl -X PUT http://localhost:8080/api/learning-cards/39/milestones/52 done=true
+200
+# curl -X POST http://localhost:8080/api/plans (P8R1C running plan)
+{"id":49,"status":"IN_PROGRESS","restSeconds":2999}
+# curl -X POST http://localhost:8080/api/plans (P8R1C upcoming plan)
+{"id":50,"status":"NOT_STARTED"}
+# dashboard
+{"tasks":{"completionPercent":47,"doneCount":8,"totalActive":17,"dueToday":["P8R1C curl task due today","P8E2E curl task due today","P8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FE","P7FE quick-add task"]},"plans":{"upcomingCount":3,"completedCount":7,"inProgress":["P8E2E running plan","P8R1C running plan"]},"learning":{"milestonesDone":2,"milestonesTotal":4}}

@@ -1,0 +1,108 @@
+Backend & Frontend DEVs Task One
+---------------------------------
+
+Required project loops:
+-------------------------
+
+loop-0: orchestrator
+  command (one line runs everything):
+    /orchestrator <path/to/feature-PRD.md>        example: /orchestrator Task_PRD.md
+  input:
+    - feature PRD md file
+    - tech-stack.yaml (fixed tech stack and versions for all loops, never change versions without updating this file)
+  output:
+    - specs/<NNN-feature>/ (Spec Kit artifacts: spec.md, plan.md, research.md, data-model.md, contracts/, tasks.md, checklists/)
+    - run-plan.md in outputs/ of this loop (list of phases and the owner loop of each task)
+    - run-summary.md in outputs/ of this loop (final status of every phase per loop, bugs, trials, total time and token consumption)
+    - progress.md and state/ files (current phase, current loop, trial counter per loop, open bugs)
+  process:
+    0. Setup (first run only): if .specify/ is missing run `specify init --here --ai claude`, then run /speckit.constitution with the content of tech-stack.yaml (stack and pinned versions, coding standards, unit testing and coverage rules, swagger required for backend, playwright MCP for UI testing)
+    1. Specify: run /speckit.specify with the PRD content -> spec.md (user stories and acceptance criteria)
+    2. Clarify loop (right after specify, no user input needed):
+         a. run /speckit.clarify on spec.md
+         b. for each question asked, auto-select the recommended answer (if no option is marked recommended, choose the safest option that best matches the PRD) and let Spec Kit write it into spec.md
+         c. repeat a-b until /speckit.clarify reports no questions and no answers required
+         d. log every round (questions, chosen answers) in progress.md and state/ files
+    3. Plan: run /speckit.plan with tech-stack.yaml as the technical context -> plan.md, data-model.md, contracts/ (the OpenAPI contract is the source of the backend swagger)
+    4. Tasks: run /speckit.tasks -> tasks.md split into phases, tag each task with its owner [BE], [FE] or [TEST]
+    5. Analyze loop (gate before any code is written, no user input needed):
+         a. run /speckit.analyze on spec.md, plan.md and tasks.md
+         b. for each finding or question, auto-select the recommended fix/answer and apply it to the related artifact (spec.md, plan.md or tasks.md)
+         c. repeat a-b until /speckit.analyze reports no findings, no questions and no answers required
+         d. log every round (findings, chosen fixes) in progress.md and state/ files
+    6. Dispatch for each phase in order (before starting a loop, check every input below exists/is reachable, if not stop and report):
+         a. run loop-1 backend-dev
+              passes: PRD md file, tech-stack.yaml (backend section), specs/<feature>/spec.md, plan.md, data-model.md, contracts/, tasks.md + the phase number and its [BE] task IDs
+              waits for (handoff): backend running URL, swagger file path/URL, loop-1 phase md file path in outputs/
+         b. run loop-2 frontend-dev
+              passes: PRD md file, tech-stack.yaml (frontend section), specs/<feature>/spec.md, plan.md, tasks.md + the phase number and its [FE] task IDs, backend swagger + backend running URL (from step a)
+              waits for (handoff): UI artifact URL, loop-2 phase md file path in outputs/
+         c. run loop-3 testing
+              passes: PRD md file, tech-stack.yaml (testing section + backend/frontend unit test tools), specs/<feature>/spec.md, tasks.md + the phase number and its [TEST] task IDs, backend swagger + backend running URL (from step a), UI artifact URL (from step b), loop-1 and loop-2 phase md files in outputs/ (from steps a and b)
+              waits for (handoff): test report path, list of bug report paths with owner loop
+         d. if bug reports exist -> pass each bug report path + related task ID to its owner loop (backend-dev or frontend-dev) to fix, wait for the updated URL/swagger, then run loop-3 re-test with the same inputs as step c plus the failed test case list, max 3 trials per phase
+         e. save all handoff values (URLs, swagger, file paths) in state/ files, mark the phase done in progress.md and state/ files, then move to the next phase
+    7. Finish: write run-summary.md
+  rules:
+    - each loop keeps its own Loop-instructions.md, task.md, progress.md, state/ and outputs/ (see Loop structure below)
+    - the orchestrator passes paths and URLs only (as listed in step 6 for each loop), it does not write application code
+    - each loop's handoff output becomes the next loop's input, the orchestrator reads it from state/ files so nothing is lost on resume
+    - clarify and analyze loops never stop to ask the user, they always take the recommended answer; safety cap: 10 rounds each, if still not clean stop and report the remaining items in run-summary.md
+    - resume: on restart read state/ files and continue from the last unfinished phase and loop
+    - stop condition: all phases pass in loop-3, or a phase reaches 3 failed trials -> stop and report in run-summary.md
+
+loop-1: backend-dev (input: PRD md file, tech-stack.yaml (backend section) and Spec Kit artifacts specs/<feature>/spec.md, plan.md, contracts/ and the [BE] tasks of tasks.md, output: backend phases md files in outputs/ of this loop generated from the [BE] phases of tasks.md with the tasks of each phase and with mark the achieved task in them, in tasks.md and in the progress.md and state/ files then create the code using the backend stack in tech-stack.yaml (Java, Spring Boot, Maven wrapper, H2 profiles, exact versions), and swager for backend endpoints using springdoc-openapi that matches contracts/ then test each implemented phase after finish it using curl commands, process: implement the backend code development planning and implementation using /speckit.implement scoped to the [BE] tasks of the current phase and test it using curl commands and generate the swagre, optional: add unit testing)
+
+loop-2: frontend-dev (input: PRD md file, tech-stack.yaml (frontend section), backend swagger and Spec Kit artifacts specs/<feature>/spec.md, plan.md and the [FE] tasks of tasks.md, output: frontend phases md files in outputs/ of this loop generated from the [FE] phases of tasks.md with the tasks of each phase and with mark the achieved task in them, in tasks.md and in the progress.md and state/ files then implement frontend code using the frontend stack in tech-stack.yaml (Node, Angular, exact versions) with the API client generated from the backend swagger by openapi-generator-cli (typescript-angular, never hand-written) and UI artifact URL, then this URL using playwright MCP for each feature/phase implementation, process: plan and implement the frontend code development using /speckit.implement scoped to the [FE] tasks of the current phase and test the URL as each feature done using playwright MCP, optional: add unit testing)
+
+loop-3: testing
+  input:
+    - PRD md file (user stories and acceptance criteria)
+    - tech-stack.yaml (playwright MCP version, backend/frontend unit test tools, JaCoCo for backend coverage)
+    - Spec Kit artifacts: specs/<feature>/spec.md (user stories and acceptance criteria) and tasks.md
+    - backend swagger and backend running URL (from loop-1)
+    - frontend UI artifact URL (from loop-2)
+    - phases md files in outputs/ of loop-1 and loop-2
+  output:
+    - testing phases md files in outputs/ of this loop, each one lists the test cases of the phase under 3 sections: Backend tests, Frontend tests, Backend + Frontend tests
+    - each test case traces back to its user story ID in spec.md
+    - mark each test case as passed or failed in the phase md file, progress.md and state/ files, and tick the [TEST] tasks in tasks.md
+    - test report md file for each phase (total, passed, failed, and the curl commands / playwright steps used)
+    - bug report md file for each failed test case, assigned to the loop that owns the bug (backend-dev or frontend-dev) and referencing the task ID in tasks.md
+    - unit tests code and coverage report for backend and frontend
+  process (for each phase):
+    1. Plan: run /speckit.checklist to generate the phase checklist from the acceptance criteria in spec.md, then write the test cases of the phase from the PRD user stories and acceptance criteria
+    2. Smoke check: confirm the backend running URL and the frontend UI artifact URL are reachable, stop and report if not
+    3. Unit tests: add and run unit tests for backend and frontend and generate the coverage report
+    4. Backend tests: test every backend endpoint of the phase using curl commands based on the swagger (success cases, validation errors, not found, and status codes)
+    5. Frontend tests: test every page/feature of the phase on the UI URL using playwright MCP (UI elements, forms, validation messages, navigation)
+    6. Backend + Frontend tests: run full user flows end to end, do the action in the UI using playwright MCP then check the data in the backend using curl, and do the action in the backend using curl then check it appears in the UI using playwright MCP
+    7. Report: write the test report, mark results, and create bug reports for failed cases
+    8. Re-test: after the owner loop fixes the bugs, run the failed test cases again plus the unit tests and end to end flows as regression, until all pass or 3 trials
+    fail-fast rule: if a critical unit or backend test fails, report the bug and skip the dependent end to end flows until it is fixed
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Spec Kit usage:
+------------------
+
+install: uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v1.0.11   (version pinned in tech-stack.yaml)
+init: specify init --here --ai claude   (done once by loop-0)
+command order: /speckit.constitution -> /speckit.specify -> /speckit.clarify (repeat until clean) -> /speckit.plan -> /speckit.tasks -> /speckit.analyze (repeat until clean) -> /speckit.implement (+ /speckit.checklist for testing)
+auto-answer rule: in clarify and analyze always choose the recommended answer/fix and repeat the command until it reports no questions, no findings and no answers required
+owners: loop-0 runs constitution, specify, clarify, plan, tasks, analyze | loop-1 and loop-2 run implement for their own tasks | loop-3 runs checklist
+source of truth: specs/<feature>/ is the single source, the phases md files in outputs/ of each loop mirror tasks.md and must never diverge from it
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Loop structure:
+------------------
+
+Loop-instructions.md
+task.md
+progress.md , should represent all action items implemented and log the start and end time and token consumption for each milestone implementation
+state/
+stop condition: work milestone complete correctly or 3 trials
+outputs/: contains md file for each spec or milestone implementation
+specs/<feature>/ (shared by all loops): Spec Kit artifacts, read by all loops, tasks.md is ticked by the owner loop of each task
+tech-stack.yaml (shared by all loops): the only source of the tech stack and versions, read by all loops, changed only by the user

@@ -1,0 +1,1185 @@
+{
+  "status": "done",
+  "prd": "Task_PRD.md",
+  "feature_dir": "specs/001-quickflow-productivity",
+  "started": "2026-10-03T17:44:07+03:00",
+  "ended": "2026-10-04T01:39:35+03:00",
+  "current_step": "7-finish",
+  "current_phase": 8,
+  "current_loop": null,
+  "setup": {
+    "specify_installed": true,
+    "specify_init": true,
+    "constitution": true
+  },
+  "pipeline": {
+    "specify": "done",
+    "clarify": {
+      "status": "clean",
+      "rounds": 2
+    },
+    "plan": "done",
+    "tasks": "done",
+    "analyze": {
+      "status": "clean",
+      "rounds": 10
+    }
+  },
+  "phases": [
+    {
+      "number": 1,
+      "name": "Setup & Foundation (Shared Infrastructure)",
+      "be_tasks": [
+        "T001",
+        "T002",
+        "T003",
+        "T004",
+        "T005",
+        "T006",
+        "T007",
+        "T008"
+      ],
+      "fe_tasks": [
+        "T009",
+        "T010",
+        "T011",
+        "T012",
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017"
+      ],
+      "test_tasks": [
+        "T018",
+        "T019",
+        "T020"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 0
+    },
+    {
+      "number": 2,
+      "name": "User Story 1 - Manage tasks (Priority: P1) \ud83c\udfaf MVP",
+      "be_tasks": [
+        "T021",
+        "T022",
+        "T023",
+        "T024",
+        "T025",
+        "T026"
+      ],
+      "fe_tasks": [
+        "T027",
+        "T028",
+        "T029",
+        "T030",
+        "T031"
+      ],
+      "test_tasks": [
+        "T032",
+        "T033",
+        "T034",
+        "T035"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 1
+    },
+    {
+      "number": 3,
+      "name": "User Story 2 - Track recurring habits (Priority: P2)",
+      "be_tasks": [
+        "T036",
+        "T037",
+        "T038",
+        "T039",
+        "T040",
+        "T041",
+        "T042"
+      ],
+      "fe_tasks": [
+        "T043",
+        "T044",
+        "T045",
+        "T046"
+      ],
+      "test_tasks": [
+        "T047",
+        "T048",
+        "T049",
+        "T050"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 0
+    },
+    {
+      "number": 4,
+      "name": "User Story 3 - Track learning resources (Priority: P3)",
+      "be_tasks": [
+        "T051",
+        "T052",
+        "T053",
+        "T054",
+        "T055",
+        "T056",
+        "T057"
+      ],
+      "fe_tasks": [
+        "T058",
+        "T059",
+        "T060",
+        "T061"
+      ],
+      "test_tasks": [
+        "T062",
+        "T063",
+        "T064",
+        "T065"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 0
+    },
+    {
+      "number": 5,
+      "name": "User Story 4 - Build and run time-boxed plans (Priority: P2)",
+      "be_tasks": [
+        "T066",
+        "T067",
+        "T068",
+        "T069",
+        "T070",
+        "T071",
+        "T072",
+        "T073"
+      ],
+      "fe_tasks": [
+        "T074",
+        "T075",
+        "T076",
+        "T077",
+        "T078"
+      ],
+      "test_tasks": [
+        "T079",
+        "T080",
+        "T081",
+        "T082"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 0
+    },
+    {
+      "number": 6,
+      "name": "User Story 6 - Navigate and set preferences (Priority: P4)",
+      "be_tasks": [
+        "T083",
+        "T084",
+        "T085"
+      ],
+      "fe_tasks": [
+        "T086",
+        "T087",
+        "T088"
+      ],
+      "test_tasks": [
+        "T089",
+        "T090",
+        "T091"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 0
+    },
+    {
+      "number": 7,
+      "name": "User Story 5 - See everything on a dashboard (Priority: P3)",
+      "be_tasks": [
+        "T092",
+        "T093",
+        "T094"
+      ],
+      "fe_tasks": [
+        "T095",
+        "T096",
+        "T097"
+      ],
+      "test_tasks": [
+        "T098",
+        "T099",
+        "T100"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 0
+    },
+    {
+      "number": 8,
+      "name": "Polish & Cross-Cutting Concerns",
+      "be_tasks": [
+        "T101",
+        "T102"
+      ],
+      "fe_tasks": [
+        "T103",
+        "T104"
+      ],
+      "test_tasks": [
+        "T105",
+        "T106",
+        "T107"
+      ],
+      "status": "passed",
+      "loops": {
+        "backend-dev": "done",
+        "frontend-dev": "done",
+        "testing": "done"
+      },
+      "trials": 1
+    }
+  ],
+  "open_bugs": [],
+  "handoffs": {
+    "backend_url": "http://localhost:8080",
+    "swagger_url": "http://localhost:8080/v3/api-docs",
+    "swagger_file": "backend/openapi/openapi.json",
+    "ui_url": "http://localhost:4200",
+    "phases": {
+      "1": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 1,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-1-backend.md",
+          "tasks_done": [
+            "T001",
+            "T002",
+            "T003",
+            "T004",
+            "T005",
+            "T006",
+            "T007",
+            "T008"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T18:26:48+03:00",
+          "ended": "2026-10-03T18:32:18+03:00",
+          "notes": "Boot 4.1.1/Java 25 bootstrap OK; springdoc-openapi-maven-plugin 1.5 and jacoco 0.8.15 pinned. mvnw verify passes (3 tests incl. ProblemJsonSmokeTest), -Popenapi writes openapi.json (OpenAPI 3.1.0, info/servers/tags = contract, no paths yet). CORS for http://localhost:4200 on /api/** verified (preflight 200, foreign origin 403). Errors are application/problem+json with top-level errors[]; framework errors also problem+json (spring.mvc.problemdetails.enabled). Backend running; state/backend.pid = Maven JVM pid."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 1,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-1-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T009",
+            "T010",
+            "T011",
+            "T012",
+            "T013",
+            "T014",
+            "T015",
+            "T016",
+            "T017"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T18:40:49+03:00",
+          "ended": "2026-10-03T18:55:09+03:00",
+          "notes": "Angular 22.2.0 workspace (exact pins), Node v24.18.0, @vitest/coverage-v8 5.0.3 matching CLI vitest 5.0.3; openapi-generator-cli 2.41.0 (jar 7.25.0), client generated from swagger with no paths yet (base files only). Shell with 6 lazy routes, animated nav indicator, skip link, sidebar >=900px / top bar below; design tokens (contrast >=4.5:1 light+dark), motion (<=250ms, reduced-motion), shared UI, core services. ng build + ng test (2/2) pass; Playwright checks 1-7 pass with 0 console errors. Dev server running (pid in state/frontend.pid)."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 1,
+          "mode": "test",
+          "trial": 0,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-1-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-1-testing.md",
+          "totals": {
+            "total": 21,
+            "passed": 21,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 96.3,
+            "frontend_line_pct": 68.95
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "started": "2026-10-03T18:55:57+03:00",
+          "ended": "2026-10-03T19:03:07+03:00"
+        }
+      },
+      "2": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 2,
+          "mode": "fix",
+          "trial": 1,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-2-backend.md",
+          "tasks_done": [
+            "T021",
+            "T022",
+            "T023",
+            "T024",
+            "T025",
+            "T026"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [
+            "loops/loop-3-testing/outputs/bugs/BUG-P2-001.md"
+          ],
+          "started": "2026-10-03T19:32:50+03:00",
+          "ended": "2026-10-03T19:34:26+03:00",
+          "notes": "BUG-P2-001 fixed: deleteTask now produces application/json and application/problem+json, so Accept: application/problem+json gives 204 (deleted) / 404 problem+json, both with CORS headers, instead of 406. Regression unit test added; mvnw verify passes. Regenerated swagger is unchanged (still matches the contract). Phase regression curl checks pass. Backend restarted and running on :8080. The frontend accept-header.interceptor workaround is no longer needed for task delete (frontend-dev decides)."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 2,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-2-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T027",
+            "T028",
+            "T029",
+            "T030",
+            "T031"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T19:10:39+03:00",
+          "ended": "2026-10-03T19:20:41+03:00",
+          "notes": "Tasks page done: signal store over the generated TasksService (optimistic complete/status/archive/restore/delete with rollback), create/edit dialog (client and server field errors), toolbar (200 ms debounced search, filters, sort, overdue, archived view), list with enter/leave/FLIP animations and empty/filtered-empty/archived-empty states, ?new=1 quick-add. Build passes, 31/31 existing unit tests pass, 18 Playwright checks pass with 0 app console errors, test data removed. BACKEND DEFECT: DELETE /api/tasks/{id} with 'Accept: application/problem+json' (what the generated deleteTask sends) returns 406 with no CORS headers. Frontend works around it with core/accept-header.interceptor.ts, but backend-dev should accept problem+json on body-less operations (every future DELETE will hit this)."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 2,
+          "mode": "retest",
+          "trial": 1,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-2-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-2-testing.md",
+          "totals": {
+            "total": 27,
+            "passed": 27,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 97.8,
+            "frontend_line_pct": 61.61
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "closed_bugs": [
+            "loops/loop-3-testing/outputs/bugs/BUG-P2-001.md"
+          ],
+          "started": "2026-10-03T19:34:50+03:00",
+          "ended": "2026-10-03T19:38:06+03:00"
+        }
+      },
+      "3": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 3,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-3-backend.md",
+          "tasks_done": [
+            "T036",
+            "T037",
+            "T038",
+            "T039",
+            "T040",
+            "T041",
+            "T042"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T19:39:15+03:00",
+          "ended": "2026-10-03T19:44:18+03:00",
+          "notes": "Habits module in backend/src/main/java/com/quickflow/habit (10 contract operations). Swagger regenerated; Habits paths/operationIds/status codes/params/schemas/required lists match contracts/openapi.yaml. ./mvnw verify passes. 46/46 curl checks pass (201, 409 duplicate incl. concurrent race, 400 future/invalid date + DTO validation, 404). Backend running on :8080."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 3,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-3-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T043",
+            "T044",
+            "T045",
+            "T046"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T19:44:42+03:00",
+          "ended": "2026-10-03T19:51:35+03:00",
+          "notes": "Habits page at /habits: store (generated HabitsService, optimistic toggle/deactivate/activate/remove with rollback, 409 shown as 'Already done', RefreshService bump), form dialog (name<=150, description<=2000, Daily/Weekly segmented control, server errors[] per field), card grid with toggle, weekly 'done this week' badge + undo via uncompleteHabit(lastCompletedDate), streak flame bump, completion-rate ring, active/inactive sections, empty state, ?new=1. ng build passes (1 non-fatal style budget warning on habit-card), 62/62 unit tests, 18 Playwright checks pass; test data cleaned. Observation: backend accepts completion dates before habit creation."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 3,
+          "mode": "test",
+          "trial": 0,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-3-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-3-testing.md",
+          "totals": {
+            "total": 37,
+            "passed": 37,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 98.0,
+            "frontend_line_pct": 57.68
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "started": "2026-10-03T19:51:56+03:00",
+          "ended": "2026-10-03T20:05:18+03:00"
+        }
+      },
+      "4": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 4,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-4-backend.md",
+          "tasks_done": [
+            "T051",
+            "T052",
+            "T053",
+            "T054",
+            "T055",
+            "T056",
+            "T057"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T20:05:59+03:00",
+          "ended": "2026-10-03T20:11:27+03:00",
+          "notes": "10 Learning operations (/api/learning-cards, /{id}, /{id}/milestones[/{milestoneId}], /{id}/notes[/{noteId}]) match contracts/openapi.yaml (paths, operationIds, statuses, schemas, required lists). mvnw verify + openapi pass. 61/61 learning curl checks; Tasks 47/47 and Habits 46/46 regression pass. Status recomputed only on milestone add/delete/done-toggle; manual status kept otherwise; no milestones -> status unchanged. Backend running on :8080."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 4,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-4-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T058",
+            "T059",
+            "T060",
+            "T061"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T20:11:49+03:00",
+          "ended": "2026-10-03T20:19:02+03:00",
+          "notes": "Learning Resources page done: store (generated LearningService, optimistic toggle/remove with rollback, RefreshService bump), form dialog (manual status in edit mode, sent only when changed), card grid with expand/collapse height animation, milestones (strike-through, target date) and notes child components. ng build passes (only the existing habit-card budget warning); 88/88 existing unit tests pass; 16 Playwright checks pass against the real backend. Test data cleaned up (learning-cards list is empty)."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 4,
+          "mode": "test",
+          "trial": 0,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-4-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-4-testing.md",
+          "totals": {
+            "total": 34,
+            "passed": 34,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 97.7,
+            "frontend_line_pct": 56.09
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "started": "2026-10-03T20:19:20+03:00",
+          "ended": "2026-10-03T20:31:00+03:00"
+        }
+      },
+      "5": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 5,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-5-backend.md",
+          "tasks_done": [
+            "T066",
+            "T067",
+            "T068",
+            "T069",
+            "T070",
+            "T071",
+            "T072",
+            "T073"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T20:31:32+03:00",
+          "ended": "2026-10-03T20:36:21+03:00",
+          "notes": "Plans API (6 operations) implemented in backend/src/main/java/com/quickflow/plan; swagger matches contracts/openapi.yaml for all Plans paths and schemas; 44/44 curl checks pass (status transitions past/future/ended, task/habit side effects, undo no revert, removed source, 400/404 cases). Added HabitService.completeTodayIfMissing for the habit side effect. Backend running on :8080."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 5,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-5-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T074",
+            "T075",
+            "T076",
+            "T077",
+            "T078"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T20:36:42+03:00",
+          "ended": "2026-10-03T20:44:34+03:00",
+          "notes": "Todo Plans page: root PlansStore (30 s poll + RefreshService, client-derived status/rest time from NowService), PlanStartWatcher started in the shell (toast once + acknowledgePlanStart, pulse highlight), 2-step plan builder dialog, plan cards with progress ring, live countdown and item toggles. Build OK (new style budget warning for plan-builder-dialog, 4.52 kB), 126/126 unit tests, 14 Playwright checks pass. Test setup only: added provideHttpClient + provideHttpClientTesting to app.spec.ts and shell.component.spec.ts. Backend data left: plans 7, 8, 9; task 57 (DONE), habit 28, card 15."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 5,
+          "mode": "test",
+          "trial": 0,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-5-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-5-testing.md",
+          "totals": {
+            "total": 33,
+            "passed": 33,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 97.8,
+            "frontend_line_pct": 55.34
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "started": "2026-10-03T20:44:55+03:00",
+          "ended": "2026-10-03T20:59:30+03:00"
+        }
+      },
+      "6": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 6,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-6-backend.md",
+          "tasks_done": [
+            "T083",
+            "T084",
+            "T085"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T21:00:43+03:00",
+          "ended": "2026-10-03T21:03:02+03:00",
+          "notes": "GET/PUT /api/settings implemented (settings package: DefaultView, Settings entity id=1, SettingsRepository, SettingsDto as schema Settings, SettingsService creates defaults Friend/true/false/DASHBOARD on first call, SettingsController). Swagger matches contract (operationIds, codes, Settings + DefaultView schemas, required list). mvnw verify passes; 18/18 curl checks pass; settings left at defaults. displayName trimmed on save. Backend running on 8080."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 6,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-6-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T086",
+            "T087",
+            "T088"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T21:03:29+03:00",
+          "ended": "2026-10-03T21:09:28+03:00",
+          "notes": "SettingsStore (core/settings.store.ts) loaded via provideAppInitializer, falls back to defaults if backend is down; defaultViewGuard on '' redirects to the configured landing page; Settings page (display name 1-80 with validation, in-app/browser switches with Notification.requestPermission and denied state, landing-page select, save toast, reset); NotificationService prefs synced from settings (in-app off suppresses plan-start toast, browser on + granted raises system notification). Build pass, 164 unit tests pass, 12 Playwright checks pass. Settings left at defaults; test data removed."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 6,
+          "mode": "test",
+          "trial": 0,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-6-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-6-testing.md",
+          "totals": {
+            "total": 31,
+            "passed": 31,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 97.7,
+            "frontend_line_pct": 57.22
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "started": "2026-10-03T21:10:15+03:00",
+          "ended": "2026-10-03T21:17:18+03:00"
+        }
+      },
+      "7": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 7,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-7-backend.md",
+          "tasks_done": [
+            "T092",
+            "T093",
+            "T094"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T21:17:40+03:00",
+          "ended": "2026-10-03T21:21:30+03:00",
+          "notes": "GET /api/dashboard (getDashboard) implemented: DashboardResponse(@Schema Dashboard) + DashboardTasks/Habits/Plans/Learning DTOs, DashboardService reusing TaskService/HabitService/PlanService/learning repositories, DashboardController. mvnw verify passes; full swagger matches all 37 contract operations and all schemas (properties + required). Backend restarted (stale old process killed) and curl-verified: metrics equal list-endpoint counts, archived excluded, 405 on POST. Seeded curl data deleted afterwards."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 7,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-7-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T095",
+            "T096",
+            "T097"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-03T21:21:31+03:00",
+          "ended": "2026-10-04T00:23:21+03:00",
+          "notes": "Dashboard page (store + greeting, metric cards with count-up, due/overdue tasks, habit checklist, live plans, learning snapshot, quick-add dialogs, skeletons, stagger). Build passes, 186 unit tests pass, 9 Playwright checks pass (metrics update after dashboard and Habits-page toggles, match GET /api/dashboard). Screenshots: outputs/screenshots/phase-7-dashboard*.png."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 7,
+          "mode": "test",
+          "trial": 0,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-7-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-7-testing.md",
+          "totals": {
+            "total": 35,
+            "passed": 35,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 97.8,
+            "frontend_line_pct": 65.68
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "started": "2026-10-04T00:23:55+03:00",
+          "ended": "2026-10-04T00:37:00+03:00"
+        }
+      },
+      "8": {
+        "backend-dev": {
+          "loop": "backend-dev",
+          "phase": 8,
+          "mode": "implement",
+          "trial": 0,
+          "status": "done",
+          "backend_url": "http://localhost:8080",
+          "swagger_url": "http://localhost:8080/v3/api-docs",
+          "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+          "swagger_file": "backend/openapi/openapi.json",
+          "phase_file": "loops/loop-1-backend-dev/outputs/phase-8-backend.md",
+          "tasks_done": [
+            "T101",
+            "T102"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [],
+          "started": "2026-10-04T00:37:29+03:00",
+          "ended": "2026-10-04T00:40:20+03:00",
+          "notes": "T101: with 1,000 seeded tasks, every GET /api/tasks search/filter/sort combination took 1-8 ms and the dashboard 14 ms. The index task(archived,status,due_date) already existed. Seed data was deleted. T102: the regenerated and live swagger match contracts/openapi.yaml (37/37 operations, 34/34 schemas, 0 mismatches). No code changes; mvnw verify passes; backend still running."
+        },
+        "frontend-dev": {
+          "loop": "frontend-dev",
+          "phase": 8,
+          "mode": "fix",
+          "trial": 1,
+          "status": "done",
+          "ui_url": "http://localhost:4200",
+          "phase_file": "loops/loop-2-frontend-dev/outputs/phase-8-frontend.md",
+          "client_generated_from": "backend/openapi/openapi.json",
+          "tasks_done": [
+            "T103",
+            "T104"
+          ],
+          "tasks_open": [],
+          "bugs_fixed": [
+            "loops/loop-3-testing/outputs/bugs/BUG-P8-001.md",
+            "loops/loop-3-testing/outputs/bugs/BUG-P8-002.md"
+          ],
+          "started": "2026-10-04T01:23:17+03:00",
+          "ended": "2026-10-04T01:33:23+03:00",
+          "notes": "BUG-P8-001: bulk task-list updates skip row enter/leave animations (callback form + linkedSignal diff, only changes of 20 rows or fewer animate); FLIP reads before writes and stays near the viewport; Intl formatters cached; clearing the search applies at once. With 1,013 tasks in ng serve dev mode, search/filter takes 70-345 ms (was 3.5-37 s) with normal and reduced motion. BUG-P8-002: new root FocusRestorer (core/focus-restorer.ts, started in app.config) puts focus back on the same control, its re-rendered copy, the next row's matching control, or <main>. p8-keyboard-actions.js 31/31 PASS and focus never left on BODY. Build ok, 218/218 unit tests, no console errors. Perf seed data removed with phase-8-perf.sh cleanup."
+        },
+        "testing": {
+          "loop": "testing",
+          "phase": 8,
+          "mode": "retest",
+          "trial": 1,
+          "result": "passed",
+          "test_report": "loops/loop-3-testing/outputs/phase-8-test-report.md",
+          "phase_file": "loops/loop-3-testing/outputs/phase-8-testing.md",
+          "totals": {
+            "total": 28,
+            "passed": 28,
+            "failed": 0,
+            "skipped": 0
+          },
+          "coverage": {
+            "backend_line_pct": 97.8,
+            "frontend_line_pct": 65.51,
+            "backend_branch_pct": 96.2,
+            "frontend_branch_pct": 50.99
+          },
+          "failed_test_cases": [],
+          "bugs": [],
+          "closed_bugs": [
+            "loops/loop-3-testing/outputs/bugs/BUG-P8-001.md",
+            "loops/loop-3-testing/outputs/bugs/BUG-P8-002.md"
+          ],
+          "ticked_tasks": [
+            "T105",
+            "T106",
+            "T107"
+          ],
+          "started": "2026-10-04T01:33:52+03:00",
+          "ended": "2026-10-04T01:39:14+03:00"
+        }
+      }
+    }
+  },
+  "ledger": [
+    {
+      "loop": "backend-dev",
+      "phase": 1,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T18:26:20+03:00",
+      "ended": "2026-10-03T18:32:51+03:00",
+      "duration_ms": 389534,
+      "total_tokens": 114082
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 1,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T18:40:38+03:00",
+      "ended": "2026-10-03T18:55:20+03:00",
+      "duration_ms": 871467,
+      "total_tokens": 152794
+    },
+    {
+      "loop": "testing",
+      "phase": 1,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-03T18:55:25+03:00",
+      "ended": "2026-10-03T19:03:10+03:00",
+      "duration_ms": 458553,
+      "total_tokens": 141020
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 2,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T19:03:18+03:00",
+      "ended": "2026-10-03T19:10:10+03:00",
+      "duration_ms": 412131,
+      "total_tokens": 132661
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 2,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T19:10:22+03:00",
+      "ended": "2026-10-03T19:20:55+03:00",
+      "duration_ms": 627922,
+      "total_tokens": 166005
+    },
+    {
+      "loop": "testing",
+      "phase": 2,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-03T19:21:00+03:00",
+      "ended": "2026-10-03T19:32:20+03:00",
+      "duration_ms": 678908,
+      "total_tokens": 193564
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 2,
+      "mode": "fix",
+      "trial": 1,
+      "started": "2026-10-03T19:32:33+03:00",
+      "ended": "2026-10-03T19:34:30+03:00",
+      "duration_ms": 111923,
+      "total_tokens": 60335
+    },
+    {
+      "loop": "testing",
+      "phase": 2,
+      "mode": "retest",
+      "trial": 1,
+      "started": "2026-10-03T19:34:33+03:00",
+      "ended": "2026-10-03T19:38:45+03:00",
+      "duration_ms": 246898,
+      "total_tokens": 78394
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 3,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T19:38:51+03:00",
+      "ended": "2026-10-03T19:44:20+03:00",
+      "duration_ms": 325524,
+      "total_tokens": 108849
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 3,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T19:44:27+03:00",
+      "ended": "2026-10-03T19:51:35+03:00",
+      "duration_ms": 427243,
+      "total_tokens": 146619
+    },
+    {
+      "loop": "testing",
+      "phase": 3,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-03T19:51:45+03:00",
+      "ended": "2026-10-03T20:05:40+03:00",
+      "duration_ms": 832317,
+      "total_tokens": 212851
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 4,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T20:05:48+03:00",
+      "ended": "2026-10-03T20:11:30+03:00",
+      "duration_ms": 336700,
+      "total_tokens": 109246
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 4,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T20:11:35+03:00",
+      "ended": "2026-10-03T20:19:05+03:00",
+      "duration_ms": 445548,
+      "total_tokens": 140173
+    },
+    {
+      "loop": "testing",
+      "phase": 4,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-03T20:19:10+03:00",
+      "ended": "2026-10-03T20:31:00+03:00",
+      "duration_ms": 708000,
+      "total_tokens": 203203
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 5,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T20:31:12+03:00",
+      "ended": "2026-10-03T20:36:25+03:00",
+      "duration_ms": 308219,
+      "total_tokens": 114243
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 5,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T20:36:29+03:00",
+      "ended": "2026-10-03T20:44:35+03:00",
+      "duration_ms": 484059,
+      "total_tokens": 154180
+    },
+    {
+      "loop": "testing",
+      "phase": 5,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-03T20:44:43+03:00",
+      "ended": "2026-10-03T21:00:25+03:00",
+      "duration_ms": 936867,
+      "total_tokens": 238545
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 6,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T21:00:31+03:00",
+      "ended": "2026-10-03T21:03:05+03:00",
+      "duration_ms": 149188,
+      "total_tokens": 69820
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 6,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T21:03:09+03:00",
+      "ended": "2026-10-03T21:09:40+03:00",
+      "duration_ms": 390852,
+      "total_tokens": 129899
+    },
+    {
+      "loop": "testing",
+      "phase": 6,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-03T21:09:49+03:00",
+      "ended": "2026-10-03T21:17:20+03:00",
+      "duration_ms": 445960,
+      "total_tokens": 148997
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 7,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T21:17:26+03:00",
+      "ended": "2026-10-03T21:21:15+03:00",
+      "duration_ms": 226826,
+      "total_tokens": 86467
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 7,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-03T21:21:21+03:00",
+      "ended": "2026-10-03T21:30:20+03:00",
+      "duration_ms": 535943,
+      "total_tokens": 166686,
+      "note": "interrupted by API rate limit (429); re-dispatched"
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 7,
+      "mode": "implement (resume)",
+      "trial": 0,
+      "started": "2026-10-04T00:20:43+03:00",
+      "ended": "2026-10-04T00:23:20+03:00",
+      "duration_ms": 155557,
+      "total_tokens": 84615
+    },
+    {
+      "loop": "testing",
+      "phase": 7,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-04T00:23:28+03:00",
+      "ended": "2026-10-04T00:37:15+03:00",
+      "duration_ms": 820426,
+      "total_tokens": 232354
+    },
+    {
+      "loop": "backend-dev",
+      "phase": 8,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-04T00:37:19+03:00",
+      "ended": "2026-10-04T00:40:20+03:00",
+      "duration_ms": 178977,
+      "total_tokens": 57659
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 8,
+      "mode": "implement",
+      "trial": 0,
+      "started": "2026-10-04T00:40:27+03:00",
+      "ended": "2026-10-04T00:47:25+03:00",
+      "duration_ms": 416963,
+      "total_tokens": 106368
+    },
+    {
+      "loop": "testing",
+      "phase": 8,
+      "mode": "test",
+      "trial": 0,
+      "started": "2026-10-04T00:47:34+03:00",
+      "ended": "2026-10-04T01:22:40+03:00",
+      "duration_ms": 2102566,
+      "total_tokens": 300854
+    },
+    {
+      "loop": "frontend-dev",
+      "phase": 8,
+      "mode": "fix",
+      "trial": 1,
+      "started": "2026-10-04T01:22:47+03:00",
+      "ended": "2026-10-04T01:33:25+03:00",
+      "duration_ms": 629557,
+      "total_tokens": 139641
+    },
+    {
+      "loop": "testing",
+      "phase": 8,
+      "mode": "retest",
+      "trial": 1,
+      "started": "2026-10-04T01:33:31+03:00",
+      "ended": "2026-10-04T01:39:25+03:00",
+      "duration_ms": 350926,
+      "total_tokens": 113014
+    }
+  ],
+  "blocked_reason": null,
+  "fixed_bugs": [
+    {
+      "path": "loops/loop-3-testing/outputs/bugs/BUG-P2-001.md",
+      "owner": "backend-dev",
+      "task_id": "T025",
+      "phase": 2,
+      "status": "fixed (trial 1)"
+    },
+    {
+      "path": "loops/loop-3-testing/outputs/bugs/BUG-P8-001.md",
+      "owner": "frontend-dev",
+      "task_id": "T106",
+      "phase": 8,
+      "status": "fixed (trial 1)"
+    },
+    {
+      "path": "loops/loop-3-testing/outputs/bugs/BUG-P8-002.md",
+      "owner": "frontend-dev",
+      "task_id": "T105",
+      "phase": 8,
+      "status": "fixed (trial 1)"
+    }
+  ]
+}

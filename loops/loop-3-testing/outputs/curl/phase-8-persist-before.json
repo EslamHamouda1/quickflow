@@ -1,0 +1,892 @@
+{
+  "tasks": [
+    {
+      "id": 37,
+      "title": "QA t1 ui-created task",
+      "description": "created by retest t1",
+      "status": "TODO",
+      "priority": "HIGH",
+      "dueDate": "2026-10-01",
+      "createdAt": "2026-10-03T19:36:46.072842+03:00",
+      "updatedAt": "2026-10-03T19:36:46.479869+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": true
+    },
+    {
+      "id": 57,
+      "title": "Write plan report",
+      "description": null,
+      "status": "DONE",
+      "priority": "HIGH",
+      "dueDate": null,
+      "createdAt": "2026-10-03T20:42:04.968507+03:00",
+      "updatedAt": "2026-10-03T20:42:59.788436+03:00",
+      "completedAt": "2026-10-03T20:42:59.788436+03:00",
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 62,
+      "title": "P5E2E Write summary",
+      "description": null,
+      "status": "DONE",
+      "priority": "MEDIUM",
+      "dueDate": null,
+      "createdAt": "2026-10-03T20:53:09.042308+03:00",
+      "updatedAt": "2026-10-03T20:54:12.015164+03:00",
+      "completedAt": "2026-10-03T20:54:12.015164+03:00",
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 72,
+      "title": "P7 Write dashboard notes",
+      "description": null,
+      "status": "TODO",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-03",
+      "createdAt": "2026-10-03T21:27:16.991943+03:00",
+      "updatedAt": "2026-10-04T01:02:05.732744+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": true
+    },
+    {
+      "id": 73,
+      "title": "P7 Review pull request",
+      "description": null,
+      "status": "DONE",
+      "priority": "HIGH",
+      "dueDate": "2026-10-03",
+      "createdAt": "2026-10-03T21:27:16.996187+03:00",
+      "updatedAt": "2026-10-03T21:27:48.014531+03:00",
+      "completedAt": "2026-10-03T21:27:48.014531+03:00",
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 74,
+      "title": "P7 curl task due today",
+      "description": null,
+      "status": "TODO",
+      "priority": "LOW",
+      "dueDate": "2026-10-03",
+      "createdAt": "2026-10-03T21:28:11.134054+03:00",
+      "updatedAt": "2026-10-03T21:28:11.134054+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": true
+    },
+    {
+      "id": 75,
+      "title": "P7 quick-add task",
+      "description": null,
+      "status": "TODO",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-03",
+      "createdAt": "2026-10-03T21:29:42.061938+03:00",
+      "updatedAt": "2026-10-03T21:29:42.061938+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": true
+    },
+    {
+      "id": 76,
+      "title": "P7FE Due today task",
+      "description": null,
+      "status": "DONE",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-04",
+      "createdAt": "2026-10-04T00:21:46.050699+03:00",
+      "updatedAt": "2026-10-04T00:21:54.772292+03:00",
+      "completedAt": "2026-10-04T00:21:54.772292+03:00",
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 77,
+      "title": "P7FE quick-add task",
+      "description": null,
+      "status": "TODO",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-04",
+      "createdAt": "2026-10-04T00:22:30.38994+03:00",
+      "updatedAt": "2026-10-04T00:22:30.38994+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 1096,
+      "title": "P8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FE",
+      "description": "Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words ",
+      "status": "TODO",
+      "priority": "HIGH",
+      "dueDate": "2026-10-04",
+      "createdAt": "2026-10-04T00:41:45.297301+03:00",
+      "updatedAt": "2026-10-04T00:41:45.297301+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 2118,
+      "title": "P8E2E task",
+      "description": null,
+      "status": "DONE",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-04",
+      "createdAt": "2026-10-04T01:14:47.946057+03:00",
+      "updatedAt": "2026-10-04T01:14:48.278905+03:00",
+      "completedAt": "2026-10-04T01:14:48.278905+03:00",
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 2119,
+      "title": "P8E2E plan task",
+      "description": null,
+      "status": "DONE",
+      "priority": "MEDIUM",
+      "dueDate": null,
+      "createdAt": "2026-10-04T01:14:52.104779+03:00",
+      "updatedAt": "2026-10-04T01:15:37.411355+03:00",
+      "completedAt": "2026-10-04T01:15:37.411355+03:00",
+      "archived": false,
+      "overdue": false
+    },
+    {
+      "id": 2120,
+      "title": "P8E2E curl task due today",
+      "description": null,
+      "status": "TODO",
+      "priority": "HIGH",
+      "dueDate": "2026-10-04",
+      "createdAt": "2026-10-04T01:16:38.867386+03:00",
+      "updatedAt": "2026-10-04T01:16:38.867386+03:00",
+      "completedAt": null,
+      "archived": false,
+      "overdue": false
+    }
+  ],
+  "archived": [
+    {
+      "id": 64,
+      "title": "P5E2E archived task",
+      "description": null,
+      "status": "TODO",
+      "priority": "MEDIUM",
+      "dueDate": null,
+      "createdAt": "2026-10-03T20:55:52.911179+03:00",
+      "updatedAt": "2026-10-03T20:55:52.91834+03:00",
+      "completedAt": null,
+      "archived": true,
+      "overdue": false
+    },
+    {
+      "id": 65,
+      "title": "P5E2E late archive",
+      "description": null,
+      "status": "TODO",
+      "priority": "MEDIUM",
+      "dueDate": null,
+      "createdAt": "2026-10-03T20:55:52.940051+03:00",
+      "updatedAt": "2026-10-03T20:56:16.504271+03:00",
+      "completedAt": null,
+      "archived": true,
+      "overdue": false
+    }
+  ],
+  "habits": [
+    {
+      "id": 28,
+      "name": "Stretch 10 minutes",
+      "description": null,
+      "frequency": "DAILY",
+      "createdAt": "2026-10-03T20:42:04.97683+03:00",
+      "active": true,
+      "completedToday": true,
+      "doneForCurrentPeriod": true,
+      "currentStreak": 2,
+      "completionRate": 100,
+      "lastCompletedDate": "2026-10-04"
+    },
+    {
+      "id": 31,
+      "name": "P5E2E Read 10 pages",
+      "description": null,
+      "frequency": "DAILY",
+      "createdAt": "2026-10-03T20:53:09.055829+03:00",
+      "active": true,
+      "completedToday": true,
+      "doneForCurrentPeriod": true,
+      "currentStreak": 2,
+      "completionRate": 100,
+      "lastCompletedDate": "2026-10-04"
+    },
+    {
+      "id": 32,
+      "name": "P5E2E inactive habit",
+      "description": null,
+      "frequency": "DAILY",
+      "createdAt": "2026-10-03T20:55:52.92531+03:00",
+      "active": false,
+      "completedToday": false,
+      "doneForCurrentPeriod": false,
+      "currentStreak": 0,
+      "completionRate": 0,
+      "lastCompletedDate": null
+    },
+    {
+      "id": 34,
+      "name": "P7 Weekly review",
+      "description": null,
+      "frequency": "WEEKLY",
+      "createdAt": "2026-10-03T21:27:17.000578+03:00",
+      "active": true,
+      "completedToday": false,
+      "doneForCurrentPeriod": false,
+      "currentStreak": 0,
+      "completionRate": 0,
+      "lastCompletedDate": null
+    },
+    {
+      "id": 43,
+      "name": "P8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabit",
+      "description": null,
+      "frequency": "DAILY",
+      "createdAt": "2026-10-04T00:41:45.327617+03:00",
+      "active": true,
+      "completedToday": false,
+      "doneForCurrentPeriod": false,
+      "currentStreak": 0,
+      "completionRate": 0,
+      "lastCompletedDate": null
+    },
+    {
+      "id": 55,
+      "name": "P8E2E habit",
+      "description": null,
+      "frequency": "DAILY",
+      "createdAt": "2026-10-04T01:14:49.712585+03:00",
+      "active": true,
+      "completedToday": true,
+      "doneForCurrentPeriod": true,
+      "currentStreak": 1,
+      "completionRate": 100,
+      "lastCompletedDate": "2026-10-04"
+    }
+  ],
+  "cards": [
+    {
+      "id": 15,
+      "title": "RxJS interop course",
+      "description": null,
+      "status": "NOT_STARTED",
+      "createdAt": "2026-10-03T20:42:04.985328+03:00",
+      "milestones": [],
+      "notes": [],
+      "milestonesTotal": 0,
+      "milestonesDone": 0,
+      "progressPercent": 0
+    },
+    {
+      "id": 17,
+      "title": "P5E2E Angular signals",
+      "description": null,
+      "status": "NOT_STARTED",
+      "createdAt": "2026-10-03T20:53:09.069883+03:00",
+      "milestones": [],
+      "notes": [],
+      "milestonesTotal": 0,
+      "milestonesDone": 0,
+      "progressPercent": 0
+    },
+    {
+      "id": 23,
+      "title": "P8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FE",
+      "description": "long learning",
+      "status": "NOT_STARTED",
+      "createdAt": "2026-10-04T00:41:45.305367+03:00",
+      "milestones": [],
+      "notes": [
+        {
+          "id": 13,
+          "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xx",
+          "createdAt": "2026-10-04T00:41:45.31812+03:00"
+        }
+      ],
+      "milestonesTotal": 0,
+      "milestonesDone": 0,
+      "progressPercent": 0
+    },
+    {
+      "id": 34,
+      "title": "P8E2E card",
+      "description": null,
+      "status": "IN_PROGRESS",
+      "createdAt": "2026-10-04T01:14:51.428605+03:00",
+      "milestones": [
+        {
+          "id": 43,
+          "title": "P8E2E milestone A",
+          "done": true,
+          "targetDate": null,
+          "completedAt": "2026-10-04T01:16:38.883108+03:00"
+        },
+        {
+          "id": 44,
+          "title": "P8E2E milestone B",
+          "done": false,
+          "targetDate": null,
+          "completedAt": null
+        }
+      ],
+      "notes": [],
+      "milestonesTotal": 2,
+      "milestonesDone": 1,
+      "progressPercent": 50
+    }
+  ],
+  "plans": [
+    {
+      "id": 16,
+      "title": "P5E2E UI focus block",
+      "estimatedDurationMinutes": 60,
+      "startDateTime": "2026-10-03T17:51:00Z",
+      "endDateTime": "2026-10-03T18:53:00Z",
+      "priorityOrder": 2,
+      "status": "COMPLETED",
+      "createdAt": "2026-10-03T20:53:52.460573+03:00",
+      "startNotifiedAt": "2026-10-03T20:53:52.476493+03:00",
+      "items": [
+        {
+          "id": 27,
+          "sourceType": "TASK",
+          "sourceId": 62,
+          "sourceTitle": "P5E2E Write summary",
+          "done": false,
+          "sourceAvailable": true
+        },
+        {
+          "id": 28,
+          "sourceType": "HABIT",
+          "sourceId": 31,
+          "sourceTitle": "P5E2E Read 10 pages",
+          "done": true,
+          "sourceAvailable": true
+        },
+        {
+          "id": 29,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 17,
+          "sourceTitle": "P5E2E Angular signals",
+          "done": true,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 3,
+      "itemsDone": 2,
+      "progressPercent": 67
+    },
+    {
+      "id": 17,
+      "title": "P5E2E curl started plan",
+      "estimatedDurationMinutes": 45,
+      "startDateTime": "2026-10-03T17:53:46Z",
+      "endDateTime": "2026-10-03T18:39:46Z",
+      "priorityOrder": 1,
+      "status": "COMPLETED",
+      "createdAt": "2026-10-03T20:54:46.793188+03:00",
+      "startNotifiedAt": "2026-10-03T20:54:53.165292+03:00",
+      "items": [
+        {
+          "id": 30,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 17,
+          "sourceTitle": "P5E2E Angular signals",
+          "done": true,
+          "sourceAvailable": true
+        },
+        {
+          "id": 31,
+          "sourceType": "HABIT",
+          "sourceId": 31,
+          "sourceTitle": "P5E2E Read 10 pages",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 2,
+      "itemsDone": 1,
+      "progressPercent": 50
+    },
+    {
+      "id": 18,
+      "title": "P5E2E long xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "estimatedDurationMinutes": 30,
+      "startDateTime": "2026-10-04T17:55:52Z",
+      "endDateTime": "2026-10-04T18:55:52Z",
+      "priorityOrder": 1,
+      "status": "NOT_STARTED",
+      "createdAt": "2026-10-03T20:55:52.866333+03:00",
+      "startNotifiedAt": null,
+      "items": [
+        {
+          "id": 32,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 17,
+          "sourceTitle": "P5E2E Angular signals",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 1,
+      "itemsDone": 0,
+      "progressPercent": 0
+    },
+    {
+      "id": 20,
+      "title": "P5E2E removed source plan",
+      "estimatedDurationMinutes": 30,
+      "startDateTime": "2026-10-03T20:55:52Z",
+      "endDateTime": "2026-10-03T21:55:52Z",
+      "priorityOrder": 4,
+      "status": "COMPLETED",
+      "createdAt": "2026-10-03T20:55:52.895064+03:00",
+      "startNotifiedAt": "2026-10-04T00:13:06.696722+03:00",
+      "items": [
+        {
+          "id": 34,
+          "sourceType": "TASK",
+          "sourceId": 63,
+          "sourceTitle": "P5E2E temp task",
+          "done": true,
+          "sourceAvailable": false
+        },
+        {
+          "id": 35,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 17,
+          "sourceTitle": "P5E2E Angular signals",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 2,
+      "itemsDone": 1,
+      "progressPercent": 50
+    },
+    {
+      "id": 21,
+      "title": "P5E2E starts soon",
+      "estimatedDurationMinutes": 29,
+      "startDateTime": "2026-10-03T17:57:20Z",
+      "endDateTime": "2026-10-03T18:26:35Z",
+      "priorityOrder": 1,
+      "status": "COMPLETED",
+      "createdAt": "2026-10-03T20:56:35.466772+03:00",
+      "startNotifiedAt": "2026-10-03T20:57:20.132087+03:00",
+      "items": [
+        {
+          "id": 36,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 17,
+          "sourceTitle": "P5E2E Angular signals",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 1,
+      "itemsDone": 0,
+      "progressPercent": 0
+    },
+    {
+      "id": 27,
+      "title": "P7 Focus block",
+      "estimatedDurationMinutes": 125,
+      "startDateTime": "2026-10-03T18:22:17Z",
+      "endDateTime": "2026-10-03T20:27:17Z",
+      "priorityOrder": 1,
+      "status": "COMPLETED",
+      "createdAt": "2026-10-03T21:27:17.020558+03:00",
+      "startNotifiedAt": "2026-10-03T21:27:22.663236+03:00",
+      "items": [
+        {
+          "id": 42,
+          "sourceType": "TASK",
+          "sourceId": 73,
+          "sourceTitle": "P7 Review pull request",
+          "done": true,
+          "sourceAvailable": true
+        },
+        {
+          "id": 43,
+          "sourceType": "HABIT",
+          "sourceId": 34,
+          "sourceTitle": "P7 Weekly review",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 2,
+      "itemsDone": 1,
+      "progressPercent": 50
+    },
+    {
+      "id": 41,
+      "title": "P8E2E plan",
+      "estimatedDurationMinutes": 60,
+      "startDateTime": "2026-10-03T22:09:00Z",
+      "endDateTime": "2026-10-03T23:09:00Z",
+      "priorityOrder": 1,
+      "status": "COMPLETED",
+      "createdAt": "2026-10-04T01:14:53.796746+03:00",
+      "startNotifiedAt": "2026-10-04T01:14:53.812963+03:00",
+      "items": [
+        {
+          "id": 63,
+          "sourceType": "TASK",
+          "sourceId": 2119,
+          "sourceTitle": "P8E2E plan task",
+          "done": true,
+          "sourceAvailable": true
+        },
+        {
+          "id": 64,
+          "sourceType": "HABIT",
+          "sourceId": 55,
+          "sourceTitle": "P8E2E habit",
+          "done": true,
+          "sourceAvailable": true
+        },
+        {
+          "id": 65,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 34,
+          "sourceTitle": "P8E2E card",
+          "done": true,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 3,
+      "itemsDone": 3,
+      "progressPercent": 100
+    },
+    {
+      "id": 42,
+      "title": "P8E2E running plan",
+      "estimatedDurationMinutes": 60,
+      "startDateTime": "2026-10-03T22:06:38Z",
+      "endDateTime": "2026-10-04T01:16:38Z",
+      "priorityOrder": 1,
+      "status": "IN_PROGRESS",
+      "createdAt": "2026-10-04T01:16:38.892703+03:00",
+      "startNotifiedAt": "2026-10-04T01:16:39.829546+03:00",
+      "items": [
+        {
+          "id": 66,
+          "sourceType": "HABIT",
+          "sourceId": 55,
+          "sourceTitle": "P8E2E habit",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 1,
+      "itemsDone": 0,
+      "progressPercent": 0
+    },
+    {
+      "id": 43,
+      "title": "P8E2E upcoming plan",
+      "estimatedDurationMinutes": 30,
+      "startDateTime": "2026-10-04T22:16:38Z",
+      "endDateTime": "2026-10-04T23:16:38Z",
+      "priorityOrder": 2,
+      "status": "NOT_STARTED",
+      "createdAt": "2026-10-04T01:16:38.902582+03:00",
+      "startNotifiedAt": null,
+      "items": [
+        {
+          "id": 67,
+          "sourceType": "LEARNING_RESOURCE",
+          "sourceId": 34,
+          "sourceTitle": "P8E2E card",
+          "done": false,
+          "sourceAvailable": true
+        }
+      ],
+      "itemsTotal": 1,
+      "itemsDone": 0,
+      "progressPercent": 0
+    }
+  ],
+  "planStatuses": [
+    {
+      "id": 16,
+      "status": "COMPLETED",
+      "progressPercent": 67
+    },
+    {
+      "id": 17,
+      "status": "COMPLETED",
+      "progressPercent": 50
+    },
+    {
+      "id": 18,
+      "status": "NOT_STARTED",
+      "progressPercent": 0
+    },
+    {
+      "id": 20,
+      "status": "COMPLETED",
+      "progressPercent": 50
+    },
+    {
+      "id": 21,
+      "status": "COMPLETED",
+      "progressPercent": 0
+    },
+    {
+      "id": 27,
+      "status": "COMPLETED",
+      "progressPercent": 50
+    },
+    {
+      "id": 41,
+      "status": "COMPLETED",
+      "progressPercent": 100
+    },
+    {
+      "id": 42,
+      "status": "IN_PROGRESS",
+      "progressPercent": 0
+    },
+    {
+      "id": 43,
+      "status": "NOT_STARTED",
+      "progressPercent": 0
+    }
+  ],
+  "settings": {
+    "displayName": "Friend",
+    "inAppNotifications": true,
+    "browserNotifications": true,
+    "defaultView": "DASHBOARD"
+  },
+  "dashboard": {
+    "greetingName": "Friend",
+    "today": "2026-10-04",
+    "tasks": {
+      "dueToday": [
+        {
+          "id": 2120,
+          "title": "P8E2E curl task due today",
+          "description": null,
+          "status": "TODO",
+          "priority": "HIGH",
+          "dueDate": "2026-10-04",
+          "createdAt": "2026-10-04T01:16:38.867386+03:00",
+          "updatedAt": "2026-10-04T01:16:38.867386+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": false
+        },
+        {
+          "id": 1096,
+          "title": "P8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FE",
+          "description": "Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words Long description words ",
+          "status": "TODO",
+          "priority": "HIGH",
+          "dueDate": "2026-10-04",
+          "createdAt": "2026-10-04T00:41:45.297301+03:00",
+          "updatedAt": "2026-10-04T00:41:45.297301+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": false
+        },
+        {
+          "id": 77,
+          "title": "P7FE quick-add task",
+          "description": null,
+          "status": "TODO",
+          "priority": "MEDIUM",
+          "dueDate": "2026-10-04",
+          "createdAt": "2026-10-04T00:22:30.38994+03:00",
+          "updatedAt": "2026-10-04T00:22:30.38994+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": false
+        }
+      ],
+      "overdue": [
+        {
+          "id": 75,
+          "title": "P7 quick-add task",
+          "description": null,
+          "status": "TODO",
+          "priority": "MEDIUM",
+          "dueDate": "2026-10-03",
+          "createdAt": "2026-10-03T21:29:42.061938+03:00",
+          "updatedAt": "2026-10-03T21:29:42.061938+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": true
+        },
+        {
+          "id": 74,
+          "title": "P7 curl task due today",
+          "description": null,
+          "status": "TODO",
+          "priority": "LOW",
+          "dueDate": "2026-10-03",
+          "createdAt": "2026-10-03T21:28:11.134054+03:00",
+          "updatedAt": "2026-10-03T21:28:11.134054+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": true
+        },
+        {
+          "id": 72,
+          "title": "P7 Write dashboard notes",
+          "description": null,
+          "status": "TODO",
+          "priority": "MEDIUM",
+          "dueDate": "2026-10-03",
+          "createdAt": "2026-10-03T21:27:16.991943+03:00",
+          "updatedAt": "2026-10-04T01:02:05.732744+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": true
+        },
+        {
+          "id": 37,
+          "title": "QA t1 ui-created task",
+          "description": "created by retest t1",
+          "status": "TODO",
+          "priority": "HIGH",
+          "dueDate": "2026-10-01",
+          "createdAt": "2026-10-03T19:36:46.072842+03:00",
+          "updatedAt": "2026-10-03T19:36:46.479869+03:00",
+          "completedAt": null,
+          "archived": false,
+          "overdue": true
+        }
+      ],
+      "completedTodayCount": 3,
+      "totalActive": 13,
+      "doneCount": 6,
+      "completionPercent": 46
+    },
+    "habits": {
+      "today": [
+        {
+          "id": 55,
+          "name": "P8E2E habit",
+          "description": null,
+          "frequency": "DAILY",
+          "createdAt": "2026-10-04T01:14:49.712585+03:00",
+          "active": true,
+          "completedToday": true,
+          "doneForCurrentPeriod": true,
+          "currentStreak": 1,
+          "completionRate": 100,
+          "lastCompletedDate": "2026-10-04"
+        },
+        {
+          "id": 43,
+          "name": "P8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabitP8FEhabit",
+          "description": null,
+          "frequency": "DAILY",
+          "createdAt": "2026-10-04T00:41:45.327617+03:00",
+          "active": true,
+          "completedToday": false,
+          "doneForCurrentPeriod": false,
+          "currentStreak": 0,
+          "completionRate": 0,
+          "lastCompletedDate": null
+        },
+        {
+          "id": 34,
+          "name": "P7 Weekly review",
+          "description": null,
+          "frequency": "WEEKLY",
+          "createdAt": "2026-10-03T21:27:17.000578+03:00",
+          "active": true,
+          "completedToday": false,
+          "doneForCurrentPeriod": false,
+          "currentStreak": 0,
+          "completionRate": 0,
+          "lastCompletedDate": null
+        },
+        {
+          "id": 31,
+          "name": "P5E2E Read 10 pages",
+          "description": null,
+          "frequency": "DAILY",
+          "createdAt": "2026-10-03T20:53:09.055829+03:00",
+          "active": true,
+          "completedToday": true,
+          "doneForCurrentPeriod": true,
+          "currentStreak": 2,
+          "completionRate": 100,
+          "lastCompletedDate": "2026-10-04"
+        },
+        {
+          "id": 28,
+          "name": "Stretch 10 minutes",
+          "description": null,
+          "frequency": "DAILY",
+          "createdAt": "2026-10-03T20:42:04.97683+03:00",
+          "active": true,
+          "completedToday": true,
+          "doneForCurrentPeriod": true,
+          "currentStreak": 2,
+          "completionRate": 100,
+          "lastCompletedDate": "2026-10-04"
+        }
+      ],
+      "activeCount": 5,
+      "completedTodayCount": 3
+    },
+    "plans": {
+      "inProgress": [
+        {
+          "id": 42,
+          "title": "P8E2E running plan",
+          "estimatedDurationMinutes": 60,
+          "startDateTime": "2026-10-03T22:06:38Z",
+          "endDateTime": "2026-10-04T01:16:38Z",
+          "priorityOrder": 1,
+          "status": "IN_PROGRESS",
+          "createdAt": "2026-10-04T01:16:38.892703+03:00",
+          "startNotifiedAt": "2026-10-04T01:16:39.829546+03:00",
+          "items": [
+            {
+              "id": 66,
+              "sourceType": "HABIT",
+              "sourceId": 55,
+              "sourceTitle": "P8E2E habit",
+              "done": false,
+              "sourceAvailable": true
+            }
+          ],
+          "itemsTotal": 1,
+          "itemsDone": 0,
+          "progressPercent": 0
+        }
+      ],
+      "upcomingCount": 2,
+      "completedCount": 6
+    },
+    "learning": {
+      "cardsTotal": 4,
+      "inProgressCount": 1,
+      "milestonesTotal": 2,
+      "milestonesDone": 1,
+      "milestonesCompletedLast7Days": 1
+    }
+  }
+}

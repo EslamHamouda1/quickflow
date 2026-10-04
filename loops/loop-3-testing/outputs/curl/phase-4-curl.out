@@ -1,0 +1,67 @@
+BE-001 | 201 | 201 | PASS | id=6 title='p4qa20297 Spring' status=NOT_STARTED
+BE-002 | 201 | 201 | PASS | id=7 explicit status=IN_PROGRESS
+BE-003 | 201 | 201 | PASS | boundary 200/2000 id=8
+BE-004 | 400 | 400 | PASS | empty title: Title must be 1-200 characters; Title is required
+BE-005 | 400 | 400 | PASS | blank title
+BE-006 | 400 | 400 | PASS | missing title
+BE-007 | 400 | 400 | PASS | 201 chars: Title must be 1-200 characters
+BE-008 | 400 | 400 | PASS | 2001 desc: Description must be at most 2000 characters
+BE-009 | 400 | 400 | PASS | invalid status enum
+BE-010 | 400 | 400 | PASS | malformed json
+BE-011 | 200 | 200 | PASS | get id=6
+BE-012 | 404 | 404 | PASS | detail=Learning card 999999 not found
+BE-013 | 400 | 400 | PASS | bad id
+BE-014 | 200 | 200 | PASS | newest first: 8,7,6
+BE-015 | 200 | 200 | PASS | title trimmed, description cleared, status kept=NOT_STARTED
+BE-016 | 200 | 200 | PASS | manual status=COMPLETED
+BE-017 | 200 | 200 | PASS | omitted status kept=COMPLETED
+BE-018 | 400 | 400 | PASS | blank title
+BE-019 | 400 | 400 | PASS | 201 title
+BE-020 | 400 | 400 | PASS | 2001 desc
+BE-021 | 400 | 400 | PASS | invalid status
+BE-022 | 404 | 404 | PASS | unknown card
+BE-023 | 201 | 201 | PASS | m1=6 manual COMPLETED recomputed → NOT_STARTED
+BE-024 | 201 | 201 | PASS | m2=7 created done, IN_PROGRESS 50%
+BE-025 | 400 | 400 | PASS | blank milestone title
+BE-026 | 400 | 400 | PASS | whitespace milestone title
+BE-027 | 400 | 400 | PASS | 201 milestone title
+BE-028 | 400 | 400 | PASS | invalid targetDate
+BE-029 | 404 | 404 | PASS | unknown card
+BE-030 | 201 | 201 | PASS | 200-char milestone; 1/3 → 33%
+BE-031 | 200 | 200 | PASS | remove m3 → 50%
+BE-032 | 200 | 200 | PASS | all done → COMPLETED 100%
+BE-033 | 200 | 200 | PASS | manual NOT_STARTED
+BE-034 | 200 | 200 | PASS | title-only keeps manual NOT_STARTED, done kept, targetDate replaced→null
+BE-035 | 200 | 200 | PASS | undone clears completedAt, toggle recomputes → IN_PROGRESS
+BE-036 | 400 | 400 | PASS | blank title
+BE-037 | 404 | 404 | PASS | unknown milestone: Milestone 999999 not found on learning card 6
+BE-038 | 404 | 404 | PASS | milestone of another card
+BE-039 | 404 | 404 | PASS | unknown card
+BE-040 | 400 | 400 | PASS | bad milestoneId
+BE-041 | 404 | 404 | PASS | delete milestone of another card
+BE-042 | 200 | 200 | PASS | remove done m2 → NOT_STARTED 0%
+BE-043 | 404 | 404 | PASS | delete again
+BE-044 | 400 | 400 | PASS | bad milestoneId
+BE-045 | 404 | 404 | PASS | unknown card
+BE-046 | 200 | 200 | PASS | last milestone removed keeps COMPLETED, 0%
+BE-047 | 201 | 201 | PASS | n1=6 createdAt=2026-10-03T20:25:37.084062+03:00
+BE-048 | 201 | 201 | PASS | newest first: 7,6
+BE-049 | 201 | 201 | PASS | 5000-char note
+BE-050 | 400 | 400 | PASS | empty note
+BE-051 | 400 | 400 | PASS | blank note
+BE-052 | 400 | 400 | PASS | missing text
+BE-053 | 400 | 400 | PASS | 5001 chars: Text must be 1-5000 characters
+BE-054 | 404 | 404 | PASS | unknown card
+BE-055 | 200 | 200 | PASS | removed n3
+BE-056 | 404 | 404 | PASS | delete again
+BE-057 | 404 | 404 | PASS | note of another card
+BE-058 | 404 | 404 | PASS | unknown card
+BE-059 | 400 | 400 | PASS | bad noteId
+BE-060 | 204 | 204 | PASS | delete with milestones+notes (Accept problem+json)
+BE-061 | 404 | 404 | PASS | deleted card gone
+BE-062 | 404 | 404 | PASS | notes of deleted card gone
+BE-063 | 404 | 404 | PASS | delete again
+BE-064 | 400 | 400 | PASS | delete bad id
+BE-065 | 200 | 200 | PASS | other card's children untouched
+BE-066 | 200 | 200 | PASS | cleanup: no p4qa20297 cards left
+TOTAL pass=66 fail=0

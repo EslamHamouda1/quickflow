@@ -1,0 +1,22 @@
+{
+  "loop": "frontend-dev",
+  "phase": 5,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "ui_url": "http://localhost:4200",
+  "phase_file": "loops/loop-2-frontend-dev/outputs/phase-5-frontend.md",
+  "client_generated_from": "backend/openapi/openapi.json",
+  "tasks_done": [
+    "T074",
+    "T075",
+    "T076",
+    "T077",
+    "T078"
+  ],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T20:36:42+03:00",
+  "ended": "2026-10-03T20:44:34+03:00",
+  "notes": "Todo Plans page: root PlansStore (30 s poll + RefreshService, client-derived status/rest time from NowService), PlanStartWatcher started in the shell (toast once + acknowledgePlanStart, pulse highlight), 2-step plan builder dialog, plan cards with progress ring, live countdown and item toggles. Build OK (new style budget warning for plan-builder-dialog, 4.52 kB), 126/126 unit tests, 14 Playwright checks pass. Test setup only: added provideHttpClient + provideHttpClientTesting to app.spec.ts and shell.component.spec.ts. Backend data left: plans 7, 8, 9; task 57 (DONE), habit 28, card 15."
+}

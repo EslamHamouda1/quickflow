@@ -1,0 +1,58 @@
+BE-001 | 201 | 201 | PASS | id=16 title='p2qa29407 alpha' status=TODO priority=MEDIUM overdue=true completedAt=null
+BE-002 | 201 | 201 | PASS | status=DONE completedAt=2026-10-03T19:26:33.793834+03:00
+BE-003 | 201 | 201 | PASS | due today overdue=false
+BE-004 | 201 | 201 | PASS | no due date overdue=false
+BE-005 | 201 | 201 | PASS | boundary 200/2000 accepted
+BE-006 | 400 | 400 | PASS | empty title: Title is required; Title must be 1-200 characters
+BE-007 | 400 | 400 | PASS | blank title
+BE-008 | 400 | 400 | PASS | missing title
+BE-009 | 400 | 400 | PASS | 201 chars: Title must be 1-200 characters
+BE-010 | 400 | 400 | PASS | 2001 desc: Description must be at most 2000 characters
+BE-011 | 400 | 400 | PASS | bad status
+BE-012 | 400 | 400 | PASS | bad priority
+BE-013 | 400 | 400 | PASS | bad dueDate
+BE-014 | 400 | 400 | PASS | malformed json fields=body
+BE-015 | 200 | 200 | PASS | get overdue=true
+BE-016 | 404 | 404 | PASS | detail=Task 999999 not found
+BE-017 | 400 | 400 | PASS | bad id
+BE-018 | 200 | 200 | PASS | keeps IN_PROGRESS/LOW, updatedAt 2026-10-03T19:26:33.816791+03:00 -> 2026-10-03T19:26:35.016583+03:00
+BE-019 | 200 | 200 | PASS | DONE completedAt=2026-10-03T19:26:35.037719+03:00 overdue=false
+BE-020 | 200 | 200 | PASS | back to TODO completedAt=null overdue=true
+BE-021 | 400 | 400 | PASS | empty title
+BE-022 | 400 | 400 | PASS | 201 title
+BE-023 | 400 | 400 | PASS | 2001 desc
+BE-024 | 404 | 404 | PASS | missing
+BE-025 | 400 | 400 | PASS | bad id
+BE-026 | 200 | 200 | PASS | completedAt=2026-10-03T19:26:35.138757+03:00
+BE-027 | 200 | 200 | PASS | idempotent completedAt=2026-10-03T19:26:35.138757+03:00
+BE-028 | 404 | 404 | PASS | missing
+BE-029 | 400 | 400 | PASS | bad id
+BE-030 | 200 | 200 | PASS | leave DONE clears completedAt
+BE-031 | 200 | 200 | PASS | case-insensitive q -> delta,gamma2,beta,alpha
+BE-032 | 200 | 200 | PASS | status=DONE -> beta
+BE-033 | 200 | 200 | PASS | priority=LOW -> gamma2
+BE-034 | 200 | 200 | PASS | range 2026-10-03..2026-10-04 -> gamma2,beta
+BE-035 | 200 | 200 | PASS | overdue=true -> alpha
+BE-036 | 200 | 200 | PASS | DUE_DATE ASC -> alpha,gamma2,beta,delta
+BE-037 | 200 | 200 | PASS | DUE_DATE DESC -> beta,gamma2,alpha,delta
+BE-038 | 200 | 200 | PASS | CREATED_AT ASC -> alpha,beta,gamma2,delta
+BE-039 | 200 | 200 | PASS | default -> delta,gamma2,beta,alpha
+BE-040 | 400 | 400 | PASS | bad status param
+BE-041 | 400 | 400 | PASS | bad sort
+BE-042 | 400 | 400 | PASS | bad dueFrom
+BE-043 | 200 | 200 | PASS | archived=true
+BE-044 | 200 | 200 | PASS | default excludes archived -> delta,gamma2,alpha
+BE-045 | 200 | 200 | PASS | archived=true -> beta
+BE-046 | 200 | 200 | PASS | restored archived=false
+BE-047 | 200 | 200 | PASS | back in default -> delta,gamma2,beta,alpha
+BE-048 | 404 | 404 | PASS | archive missing
+BE-049 | 404 | 404 | PASS | restore missing
+BE-050 | 400 | 400 | PASS | archive bad id
+BE-051 | 204 | 204 | PASS | empty body
+BE-052 | 404 | 404 | PASS | deleted not returned
+BE-053 | 200 | 200 | PASS | not in search -> gamma2,beta,alpha
+BE-054 | 404 | 404 | PASS | delete again
+BE-055 | 400 | 400 | PASS | delete bad id
+BE-056 | 204 | 406 | FAIL | DELETE with Accept: application/problem+json (as the generated client sends)
+BE-057 | 404 | 406 | FAIL | DELETE missing with Accept: application/problem+json
+TOTAL pass=55 fail=2 tag=p2qa29407

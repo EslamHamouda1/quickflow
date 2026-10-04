@@ -1,0 +1,13 @@
+export * from './dashboard.service';
+import { DashboardService } from './dashboard.service';
+export * from './habits.service';
+import { HabitsService } from './habits.service';
+export * from './learning.service';
+import { LearningService } from './learning.service';
+export * from './plans.service';
+import { PlansService } from './plans.service';
+export * from './settings.service';
+import { SettingsService } from './settings.service';
+export * from './tasks.service';
+import { TasksService } from './tasks.service';
+export const APIS = [DashboardService, HabitsService, LearningService, PlansService, SettingsService, TasksService];

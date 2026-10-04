@@ -1,0 +1,41 @@
+== list / search / filter with 1010 active tasks ==
+P-01     GET /api/tasks (worst of 3, 1010 rows)                                 exp 200 got 200     7.9 ms PASS
+P-02     GET /api/tasks?q=alpha (worst of 3, 500 rows)                          exp 200 got 200     5.7 ms PASS
+P-03     GET /api/tasks?q=PERF8T%20555 (worst of 3, 1 rows)                     exp 200 got 200     2.5 ms PASS
+P-04     GET /api/tasks?status=TODO (worst of 3, 338 rows)                      exp 200 got 200     3.5 ms PASS
+P-05     GET /api/tasks?priority=HIGH (worst of 3, 337 rows)                    exp 200 got 200     4.0 ms PASS
+P-06     GET /api/tasks?dueFrom=2026-10-04&dueTo=2026-11-02 (worst of 3, 344 rows) exp 200 got 200     3.9 ms PASS
+P-07     GET /api/tasks?overdue=true (worst of 3, 230 rows)                     exp 200 got 200     3.1 ms PASS
+P-08     GET /api/tasks?archived=true (worst of 3, 2 rows)                      exp 200 got 200     1.1 ms PASS
+P-09     GET /api/tasks?sort=DUE_DATE&direction=ASC (worst of 3, 1010 rows)     exp 200 got 200    10.3 ms PASS
+P-10     GET /api/tasks?q=perf8t&status=IN_PROGRESS&priority=MEDIUM&dueFrom=2026-09-04&dueTo=2026-12-02&sort=CREATED_AT&direction=DESC (worst of 3, 334 rows) exp 200 got 200     4.3 ms PASS
+P-11     GET /api/dashboard (worst of 3, 6 rows)                                exp 200 got 200    13.9 ms PASS
+== tasks CRUD ==
+P-12     POST /api/tasks                                                        exp 201 got 201     1.4 ms PASS
+P-13     PUT /api/tasks/2099                                                    exp 200 got 200     1.7 ms PASS
+P-14     POST /api/tasks/2099/complete                                          exp 200 got 200     1.1 ms PASS
+P-15     DELETE /api/tasks/2099                                                 exp 204 got 204     0.9 ms PASS
+== habits CRUD + completion ==
+P-16     POST /api/habits                                                       exp 201 got 201     1.2 ms PASS
+P-17     PUT /api/habits/45                                                     exp 200 got 200     1.5 ms PASS
+P-18     POST /api/habits/45/completions                                        exp 201 got 201     1.9 ms PASS
+P-19     DELETE /api/habits/45/completions/2026-10-04                           exp 200 got 200     1.6 ms PASS
+P-20     DELETE /api/habits/45                                                  exp 204 got 204     1.4 ms PASS
+== learning cards CRUD + milestone ==
+P-21     POST /api/learning-cards                                               exp 201 got 201     1.1 ms PASS
+P-22     PUT /api/learning-cards/25                                             exp 200 got 200     1.6 ms PASS
+P-23     POST /api/learning-cards/25/milestones                                 exp 201 got 201     1.7 ms PASS
+P-24     PUT /api/learning-cards/25/milestones/28                               exp 200 got 200     2.0 ms PASS
+P-25     DELETE /api/learning-cards/25/milestones/28                            exp 200 got 200     1.4 ms PASS
+P-26     DELETE /api/learning-cards/25                                          exp 204 got 204     1.0 ms PASS
+== plans create + item toggle + delete ==
+P-27     POST /api/tasks                                                        exp 201 got 201     0.9 ms PASS
+P-28     POST /api/plans                                                        exp 201 got 201     2.1 ms PASS
+P-29     PUT /api/plans/35/items/55                                             exp 200 got 200     2.7 ms PASS
+P-30     PUT /api/plans/35/items/55                                             exp 200 got 200     2.0 ms PASS
+P-31     DELETE /api/plans/35                                                   exp 204 got 204     1.0 ms PASS
+== settings ==
+P-32     GET /api/settings                                                      exp 200 got 200     0.7 ms PASS
+P-33     PUT /api/settings                                                      exp 200 got 200     1.5 ms PASS
+P-34     PUT /api/settings                                                      exp 200 got 200     1.4 ms PASS
+TOTAL: 34 pass, 0 fail

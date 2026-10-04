@@ -1,0 +1,27 @@
+# Build output and dependencies (also covered by backend/ and frontend/ .gitignore)
+node_modules/
+target/
+frontend/.angular/
+frontend/dist/
+
+# Local H2 databases
+backend/data/
+
+# Generated coverage HTML (percentages are kept in the test reports)
+frontend/coverage/
+loops/loop-3-testing/outputs/coverage/
+
+# Machine-specific server logs / pids
+loops/*/state/*.log
+loops/*/state/*.pid
+
+# Playwright MCP scratch output
+.playwright-mcp/
+
+# Personal Claude Code settings
+.claude/settings.local.json
+
+# Editor / OS
+/.vscode/
+.idea/
+.DS_Store

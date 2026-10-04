@@ -1,0 +1,10 @@
+{
+  "loop": "frontend-dev", "phase": 7, "mode": "implement", "trial": 0,
+  "status": "done",
+  "ui_url": "http://localhost:4200",
+  "phase_file": "loops/loop-2-frontend-dev/outputs/phase-7-frontend.md",
+  "client_generated_from": "backend/openapi/openapi.json",
+  "tasks_done": ["T095", "T096", "T097"], "tasks_open": [], "bugs_fixed": [],
+  "started": "2026-10-03T21:21:31+03:00", "ended": "2026-10-04T00:23:21+03:00",
+  "notes": "Dashboard page (store + greeting, metric cards with count-up, due/overdue tasks, habit checklist, live plans, learning snapshot, quick-add dialogs, skeletons, stagger). Build passes, 186 unit tests pass, 9 Playwright checks pass (metrics update after dashboard and Habits-page toggles, match GET /api/dashboard). Screenshots: outputs/screenshots/phase-7-dashboard*.png."
+}

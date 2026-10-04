@@ -1,0 +1,973 @@
+openapi: 3.1.0
+info:
+  title: QuickFlow API
+  version: 1.0.0
+  description: >
+    REST API of QuickFlow (single-user personal productivity). Source of truth for the backend springdoc swagger
+    and the generated typescript-angular client. Errors use RFC 9457 application/problem+json.
+servers:
+- {url: 'http://localhost:8080'}
+tags:
+- {name: Tasks}
+- {name: Habits}
+- {name: Learning}
+- {name: Plans}
+- {name: Dashboard}
+- {name: Settings}
+paths:
+  /api/tasks:
+    get:
+      tags: [Tasks]
+      operationId: listTasks
+      summary: List tasks (non-archived by default) with search, filters and sorting
+      parameters:
+      - name: q
+        in: query
+        required: false
+        schema: {type: string}
+        description: Case-insensitive title contains
+      - name: status
+        in: query
+        required: false
+        schema: {$ref: '#/components/schemas/TaskStatus'}
+      - name: priority
+        in: query
+        required: false
+        schema: {$ref: '#/components/schemas/TaskPriority'}
+      - name: dueFrom
+        in: query
+        required: false
+        schema: {type: string, format: date}
+      - name: dueTo
+        in: query
+        required: false
+        schema: {type: string, format: date}
+      - name: overdue
+        in: query
+        required: false
+        schema: {type: boolean}
+        description: true = only overdue tasks
+      - name: archived
+        in: query
+        required: false
+        schema: {type: boolean, default: false}
+        description: true = only archived tasks
+      - name: sort
+        in: query
+        required: false
+        schema: {$ref: '#/components/schemas/TaskSort'}
+      - name: direction
+        in: query
+        required: false
+        schema: {$ref: '#/components/schemas/SortDirection'}
+      responses:
+        '200':
+          description: Matching tasks (tasks without due date sort last when sort=DUE_DATE)
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+    post:
+      tags: [Tasks]
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/TaskRequest'}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+  /api/tasks/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    get:
+      tags: [Tasks]
+      operationId: getTask
+      responses:
+        '200':
+          description: The task
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    put:
+      tags: [Tasks]
+      operationId: updateTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/TaskRequest'}
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [Tasks]
+      operationId: deleteTask
+      responses:
+        '204': {description: Deleted}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/tasks/{id}/complete:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Tasks]
+      operationId: completeTask
+      summary: Set status DONE and completedAt
+      responses:
+        '200':
+          description: Completed
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/tasks/{id}/archive:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Tasks]
+      operationId: archiveTask
+      responses:
+        '200':
+          description: Archived
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/tasks/{id}/restore:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Tasks]
+      operationId: restoreTask
+      responses:
+        '200':
+          description: Restored
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/habits:
+    get:
+      tags: [Habits]
+      operationId: listHabits
+      parameters:
+      - name: active
+        in: query
+        required: false
+        schema: {type: boolean}
+        description: Omit for all habits
+      responses:
+        '200':
+          description: Habits with stats, newest first
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+    post:
+      tags: [Habits]
+      operationId: createHabit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/HabitRequest'}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+  /api/habits/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    get:
+      tags: [Habits]
+      operationId: getHabit
+      responses:
+        '200':
+          description: The habit
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    put:
+      tags: [Habits]
+      operationId: updateHabit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/HabitRequest'}
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [Habits]
+      operationId: deleteHabit
+      responses:
+        '204': {description: Deleted with its completions}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/habits/{id}/deactivate:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Habits]
+      operationId: deactivateHabit
+      responses:
+        '200':
+          description: Deactivated
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/habits/{id}/activate:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Habits]
+      operationId: activateHabit
+      responses:
+        '200':
+          description: Activated
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/habits/{id}/completions:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    get:
+      tags: [Habits]
+      operationId: listHabitCompletions
+      responses:
+        '200':
+          description: Completions, newest first
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/HabitCompletion'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    post:
+      tags: [Habits]
+      operationId: completeHabit
+      summary: Record a completion (default today); one per habit per date
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/HabitCompletionRequest'}
+      responses:
+        '201':
+          description: Recorded; returns the habit with updated stats
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /api/habits/{id}/completions/{date}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    - name: date
+      in: path
+      required: true
+      schema: {type: string, format: date}
+    delete:
+      tags: [Habits]
+      operationId: uncompleteHabit
+      summary: Remove the completion for a date
+      responses:
+        '200':
+          description: Removed; returns the habit with updated stats
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Habit'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/learning-cards:
+    get:
+      tags: [Learning]
+      operationId: listLearningCards
+      responses:
+        '200':
+          description: Cards with milestones and notes, newest first
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/LearningCard'}
+    post:
+      tags: [Learning]
+      operationId: createLearningCard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/LearningCardRequest'}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+  /api/learning-cards/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    get:
+      tags: [Learning]
+      operationId: getLearningCard
+      responses:
+        '200':
+          description: The card
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    put:
+      tags: [Learning]
+      operationId: updateLearningCard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/LearningCardRequest'}
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [Learning]
+      operationId: deleteLearningCard
+      responses:
+        '204': {description: Deleted with milestones and notes}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/learning-cards/{id}/milestones:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Learning]
+      operationId: addMilestone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/MilestoneRequest'}
+      responses:
+        '201':
+          description: Added; returns the updated card
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/learning-cards/{id}/milestones/{milestoneId}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    - name: milestoneId
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    put:
+      tags: [Learning]
+      operationId: updateMilestone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/MilestoneRequest'}
+      responses:
+        '200':
+          description: Updated; returns the updated card
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [Learning]
+      operationId: deleteMilestone
+      responses:
+        '200':
+          description: Removed; returns the updated card
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/learning-cards/{id}/notes:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Learning]
+      operationId: addNote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/NoteRequest'}
+      responses:
+        '201':
+          description: Added; returns the updated card
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/learning-cards/{id}/notes/{noteId}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    - name: noteId
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    delete:
+      tags: [Learning]
+      operationId: deleteNote
+      responses:
+        '200':
+          description: Removed; returns the updated card
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LearningCard'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/plans:
+    get:
+      tags: [Plans]
+      operationId: listPlans
+      summary: All plans with derived status, progress and rest time
+      parameters:
+      - name: status
+        in: query
+        required: false
+        schema: {$ref: '#/components/schemas/PlanStatus'}
+      responses:
+        '200':
+          description: Plans ordered by priorityOrder asc, then startDateTime asc
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/Plan'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+    post:
+      tags: [Plans]
+      operationId: createPlan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/PlanRequest'}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Plan'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+  /api/plans/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    get:
+      tags: [Plans]
+      operationId: getPlan
+      responses:
+        '200':
+          description: The plan
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Plan'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [Plans]
+      operationId: deletePlan
+      responses:
+        '204': {description: Deleted with its items; sources untouched}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/plans/{id}/items/{itemId}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    - name: itemId
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    put:
+      tags: [Plans]
+      operationId: setPlanItemDone
+      summary: Mark a plan item done / not done (task/habit side effects per business rule 13)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/PlanItemUpdateRequest'}
+      responses:
+        '200':
+          description: Updated; returns the plan
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Plan'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/plans/{id}/start-notification:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: {type: integer, format: int64}
+    post:
+      tags: [Plans]
+      operationId: acknowledgePlanStart
+      summary: Record that the start notification was shown (idempotent)
+      responses:
+        '200':
+          description: Acknowledged; returns the plan
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Plan'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/dashboard:
+    get:
+      tags: [Dashboard]
+      operationId: getDashboard
+      responses:
+        '200':
+          description: Dashboard summary computed from current data
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Dashboard'}
+  /api/settings:
+    get:
+      tags: [Settings]
+      operationId: getSettings
+      responses:
+        '200':
+          description: Current settings (defaults on first call)
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Settings'}
+    put:
+      tags: [Settings]
+      operationId: updateSettings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Settings'}
+      responses:
+        '200':
+          description: Saved
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Settings'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+components:
+  responses:
+    BadRequest:
+      description: Validation error
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    NotFound:
+      description: Resource not found
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    Conflict:
+      description: Conflict (e.g. duplicate habit completion)
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+  schemas:
+    Problem:
+      type: object
+      description: RFC 9457 problem details
+      properties:
+        type: {type: string}
+        title: {type: string}
+        status: {type: integer}
+        detail: {type: string}
+        instance: {type: string}
+        errors:
+          type: array
+          items: {$ref: '#/components/schemas/FieldError'}
+    FieldError:
+      type: object
+      required: [field, message]
+      properties:
+        field: {type: string}
+        message: {type: string}
+    TaskStatus:
+      type: string
+      enum: [TODO, IN_PROGRESS, DONE]
+    TaskPriority:
+      type: string
+      enum: [LOW, MEDIUM, HIGH]
+    TaskSort:
+      type: string
+      enum: [DUE_DATE, CREATED_AT]
+      default: CREATED_AT
+    SortDirection:
+      type: string
+      enum: [ASC, DESC]
+      default: DESC
+    TaskRequest:
+      type: object
+      required: [title]
+      properties:
+        title: {type: string, minLength: 1, maxLength: 200}
+        description:
+          type: [string, 'null']
+          maxLength: 2000
+        status: {$ref: '#/components/schemas/TaskStatus'}
+        priority: {$ref: '#/components/schemas/TaskPriority'}
+        dueDate:
+          type: [string, 'null']
+          format: date
+    Task:
+      type: object
+      required: [id, title, status, priority, createdAt, updatedAt, archived, overdue]
+      properties:
+        id: {type: integer, format: int64}
+        title: {type: string}
+        description:
+          type: [string, 'null']
+        status: {$ref: '#/components/schemas/TaskStatus'}
+        priority: {$ref: '#/components/schemas/TaskPriority'}
+        dueDate:
+          type: [string, 'null']
+          format: date
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+        completedAt:
+          type: [string, 'null']
+          format: date-time
+        archived: {type: boolean}
+        overdue: {type: boolean}
+    HabitFrequency:
+      type: string
+      enum: [DAILY, WEEKLY]
+    HabitRequest:
+      type: object
+      required: [name, frequency]
+      properties:
+        name: {type: string, minLength: 1, maxLength: 150}
+        description:
+          type: [string, 'null']
+          maxLength: 2000
+        frequency: {$ref: '#/components/schemas/HabitFrequency'}
+    Habit:
+      type: object
+      required: [id, name, frequency, createdAt, active, completedToday, doneForCurrentPeriod, currentStreak, completionRate]
+      properties:
+        id: {type: integer, format: int64}
+        name: {type: string}
+        description:
+          type: [string, 'null']
+        frequency: {$ref: '#/components/schemas/HabitFrequency'}
+        createdAt: {type: string, format: date-time}
+        active: {type: boolean}
+        completedToday: {type: boolean}
+        doneForCurrentPeriod: {type: boolean}
+        currentStreak: {type: integer}
+        completionRate: {type: integer, minimum: 0, maximum: 100}
+        lastCompletedDate:
+          type: [string, 'null']
+          format: date
+    HabitCompletionRequest:
+      type: object
+      properties:
+        date:
+          type: [string, 'null']
+          format: date
+          description: Defaults to today; must not be in the future
+    HabitCompletion:
+      type: object
+      required: [id, habitId, completionDate, createdAt]
+      properties:
+        id: {type: integer, format: int64}
+        habitId: {type: integer, format: int64}
+        completionDate: {type: string, format: date}
+        createdAt: {type: string, format: date-time}
+    LearningStatus:
+      type: string
+      enum: [NOT_STARTED, IN_PROGRESS, COMPLETED]
+    LearningCardRequest:
+      type: object
+      required: [title]
+      properties:
+        title: {type: string, minLength: 1, maxLength: 200}
+        description:
+          type: [string, 'null']
+          maxLength: 2000
+        status: {$ref: '#/components/schemas/LearningStatus'}
+    MilestoneRequest:
+      type: object
+      required: [title]
+      properties:
+        title: {type: string, minLength: 1, maxLength: 200}
+        done: {type: boolean}
+        targetDate:
+          type: [string, 'null']
+          format: date
+    Milestone:
+      type: object
+      required: [id, title, done]
+      properties:
+        id: {type: integer, format: int64}
+        title: {type: string}
+        done: {type: boolean}
+        targetDate:
+          type: [string, 'null']
+          format: date
+        completedAt:
+          type: [string, 'null']
+          format: date-time
+    NoteRequest:
+      type: object
+      required: [text]
+      properties:
+        text: {type: string, minLength: 1, maxLength: 5000}
+    Note:
+      type: object
+      required: [id, text, createdAt]
+      properties:
+        id: {type: integer, format: int64}
+        text: {type: string}
+        createdAt: {type: string, format: date-time}
+    LearningCard:
+      type: object
+      required: [id, title, status, createdAt, milestones, notes, milestonesTotal, milestonesDone, progressPercent]
+      properties:
+        id: {type: integer, format: int64}
+        title: {type: string}
+        description:
+          type: [string, 'null']
+        status: {$ref: '#/components/schemas/LearningStatus'}
+        createdAt: {type: string, format: date-time}
+        milestones:
+          type: array
+          items: {$ref: '#/components/schemas/Milestone'}
+        notes:
+          type: array
+          items: {$ref: '#/components/schemas/Note'}
+        milestonesTotal: {type: integer}
+        milestonesDone: {type: integer}
+        progressPercent: {type: integer, minimum: 0, maximum: 100}
+    PlanStatus:
+      type: string
+      enum: [NOT_STARTED, IN_PROGRESS, COMPLETED]
+    PlanItemSourceType:
+      type: string
+      enum: [TASK, HABIT, LEARNING_RESOURCE]
+    PlanItemSource:
+      type: object
+      required: [sourceType, sourceId]
+      properties:
+        sourceType: {$ref: '#/components/schemas/PlanItemSourceType'}
+        sourceId: {type: integer, format: int64}
+    PlanRequest:
+      type: object
+      required: [title, estimatedDurationMinutes, startDateTime, endDateTime, priorityOrder, items]
+      properties:
+        title: {type: string, minLength: 1, maxLength: 200}
+        estimatedDurationMinutes: {type: integer, minimum: 1}
+        startDateTime: {type: string, format: date-time}
+        endDateTime: {type: string, format: date-time, description: Must be after startDateTime}
+        priorityOrder: {type: integer, minimum: 1}
+        items:
+          type: array
+          minItems: 1
+          items: {$ref: '#/components/schemas/PlanItemSource'}
+    PlanItemUpdateRequest:
+      type: object
+      required: [done]
+      properties:
+        done: {type: boolean}
+    PlanItem:
+      type: object
+      required: [id, sourceType, sourceId, sourceTitle, done, sourceAvailable]
+      properties:
+        id: {type: integer, format: int64}
+        sourceType: {$ref: '#/components/schemas/PlanItemSourceType'}
+        sourceId: {type: integer, format: int64}
+        sourceTitle: {type: string}
+        done: {type: boolean}
+        sourceAvailable: {type: boolean}
+    Plan:
+      type: object
+      required: [id, title, estimatedDurationMinutes, startDateTime, endDateTime, priorityOrder, status, createdAt,
+        items, itemsTotal, itemsDone, progressPercent]
+      properties:
+        id: {type: integer, format: int64}
+        title: {type: string}
+        estimatedDurationMinutes: {type: integer}
+        startDateTime: {type: string, format: date-time}
+        endDateTime: {type: string, format: date-time}
+        priorityOrder: {type: integer}
+        status: {$ref: '#/components/schemas/PlanStatus'}
+        createdAt: {type: string, format: date-time}
+        startNotifiedAt:
+          type: [string, 'null']
+          format: date-time
+        items:
+          type: array
+          items: {$ref: '#/components/schemas/PlanItem'}
+        itemsTotal: {type: integer}
+        itemsDone: {type: integer}
+        progressPercent: {type: integer, minimum: 0, maximum: 100}
+        restSeconds:
+          type: [integer, 'null']
+          format: int64
+          description: Seconds until endDateTime; only when IN_PROGRESS
+    DashboardTasks:
+      type: object
+      required: [dueToday, overdue, completedTodayCount, totalActive, doneCount, completionPercent]
+      properties:
+        dueToday:
+          type: array
+          items: {$ref: '#/components/schemas/Task'}
+        overdue:
+          type: array
+          items: {$ref: '#/components/schemas/Task'}
+        completedTodayCount: {type: integer}
+        totalActive: {type: integer}
+        doneCount: {type: integer}
+        completionPercent: {type: integer, minimum: 0, maximum: 100}
+    DashboardHabits:
+      type: object
+      required: [today, activeCount, completedTodayCount]
+      properties:
+        today:
+          type: array
+          items: {$ref: '#/components/schemas/Habit'}
+        activeCount: {type: integer}
+        completedTodayCount: {type: integer}
+    DashboardPlans:
+      type: object
+      required: [inProgress, upcomingCount, completedCount]
+      properties:
+        inProgress:
+          type: array
+          items: {$ref: '#/components/schemas/Plan'}
+        upcomingCount: {type: integer}
+        completedCount: {type: integer}
+    DashboardLearning:
+      type: object
+      required: [cardsTotal, inProgressCount, milestonesTotal, milestonesDone, milestonesCompletedLast7Days]
+      properties:
+        cardsTotal: {type: integer}
+        inProgressCount: {type: integer}
+        milestonesTotal: {type: integer}
+        milestonesDone: {type: integer}
+        milestonesCompletedLast7Days: {type: integer}
+    Dashboard:
+      type: object
+      required: [greetingName, today, tasks, habits, plans, learning]
+      properties:
+        greetingName: {type: string}
+        today: {type: string, format: date}
+        tasks: {$ref: '#/components/schemas/DashboardTasks'}
+        habits: {$ref: '#/components/schemas/DashboardHabits'}
+        plans: {$ref: '#/components/schemas/DashboardPlans'}
+        learning: {$ref: '#/components/schemas/DashboardLearning'}
+    DefaultView:
+      type: string
+      enum: [DASHBOARD, TASKS, HABITS, LEARNING, PLANS]
+    Settings:
+      type: object
+      required: [displayName, inAppNotifications, browserNotifications, defaultView]
+      properties:
+        displayName: {type: string, minLength: 1, maxLength: 80}
+        inAppNotifications: {type: boolean}
+        browserNotifications: {type: boolean}
+        defaultView: {$ref: '#/components/schemas/DefaultView'}

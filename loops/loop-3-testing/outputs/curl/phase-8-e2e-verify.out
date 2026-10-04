@@ -1,0 +1,17 @@
+# curl -s http://localhost:8080/api/tasks/2118
+PASS E-01 task created in UI is stored {"id":2118,"title":"P8E2E task","dueDate":"2026-10-04","status":"DONE"}
+PASS E-02 task completed in UI is DONE with completedAt {"status":"DONE","completedAt":"2026-10-04T01:14:48.278905+03:00"}
+# curl -s http://localhost:8080/api/habits/55 ; http://localhost:8080/api/habits/55/completions
+PASS E-03 habit created in UI is stored (daily, active) 
+PASS E-04 habit completion for today stored ["2026-10-04"]
+# curl -s http://localhost:8080/api/learning-cards/34
+PASS E-05 learning card with 2 milestones stored 
+# curl -s http://localhost:8080/api/plans/41
+PASS E-06 plan built from existing task, habit, learning card 
+PASS E-07 all plan items done → COMPLETED, 100 %, no rest time {"status":"COMPLETED","progressPercent":100,"itemsDone":3,"restSeconds":null}
+PASS E-08 plan task item toggled the source task to DONE 
+# curl -s http://localhost:8080/api/dashboard (compared with phase-8-dash-before.json)
+PASS E-09 dashboard deltas: tasks done +2, total +2 {"doneCount":6,"totalActive":12,"completionPercent":50,"completedTodayCount":3}
+PASS E-10 dashboard deltas: habits active +1, completed today +1 {"activeCount":5,"completedTodayCount":3}
+PASS E-11 dashboard deltas: plans completed +1, learning cards +1, milestones +2 {"plans":{"upcomingCount":1,"completedCount":6},"learning":{"cardsTotal":4,"inProgressCount":0,"milestonesTotal":2,"milestonesDone":0,"milestonesCompletedLast7Days":0}}
+TOTAL: 11 pass, 0 fail

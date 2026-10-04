@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: quickflow
+  datasource:
+    url: jdbc:h2:file:./data/quickflow
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  mvc:
+    problemdetails:
+      enabled: true
+  jackson:
+    datatype:
+      datetime:
+        write-dates-as-timestamps: false
+        write-durations-as-timestamps: false
+
+server:
+  port: 8080
+
+springdoc:
+  override-with-generic-response: false
+  api-docs:
+    path: /v3/api-docs
+    version: openapi_3_1
+  swagger-ui:
+    path: /swagger-ui.html

@@ -1,0 +1,11 @@
+# (b) curl → UI seed
+curl -X POST http://localhost:8080/api/tasks {title:P8E2E curl task due today, dueDate:2026-10-04, priority:HIGH}
+{"id":2120,"title":"P8E2E curl task due today"}
+curl -X PUT http://localhost:8080/api/learning-cards/34/milestones/43 {title:P8E2E milestone A, done:true}
+200
+curl -X POST http://localhost:8080/api/plans P8E2E running plan start=2026-10-03T22:06:38Z end=2026-10-04T01:16:38Z items=[HABIT 55]
+{"id":42,"status":"IN_PROGRESS","restSeconds":10799}
+curl -X POST http://localhost:8080/api/plans P8E2E upcoming plan start=2026-10-04T22:16:38Z
+{"id":43,"status":"NOT_STARTED"}
+# dashboard after curl changes
+{"due":["P8E2E curl task due today","P8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FEP8FE","P7FE quick-add task"],"pct":46,"done":6,"total":13,"plansIP":["P8E2E running plan"],"upcoming":2,"completed":6,"ms":"1/2","ms7":1}

@@ -1,0 +1,369 @@
+{
+  "status": "idle",
+  "current_phase": 8,
+  "mode": "retest",
+  "trial": 1,
+  "phases": {
+    "1": {
+      "status": "passed",
+      "mode": "test",
+      "trial": 0,
+      "tasks": [
+        "T018",
+        "T019",
+        "T020"
+      ],
+      "ticked": [
+        "T018",
+        "T019",
+        "T020"
+      ],
+      "totals": {
+        "total": 21,
+        "passed": 21,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 96.3,
+        "backend_branch_pct": 68.8,
+        "frontend_line_pct": 68.95,
+        "frontend_branch_pct": 77.6
+      },
+      "open_bugs": [],
+      "started": "2026-10-03T18:55:57+03:00",
+      "ended": "2026-10-03T19:03:07+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-1.json"
+    },
+    "2": {
+      "status": "passed",
+      "mode": "retest",
+      "trial": 1,
+      "tasks": [
+        "T032",
+        "T033",
+        "T034",
+        "T035"
+      ],
+      "ticked": [
+        "T032",
+        "T033",
+        "T034",
+        "T035"
+      ],
+      "totals": {
+        "total": 27,
+        "passed": 27,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 97.8,
+        "backend_branch_pct": 90.5,
+        "frontend_line_pct": 61.61,
+        "frontend_branch_pct": 55.25
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "backend/src/test/java/com/quickflow/task/TaskServiceTest.java",
+        "backend/src/test/java/com/quickflow/task/TaskRepositoryTest.java",
+        "backend/src/test/java/com/quickflow/task/MutableClock.java",
+        "backend/src/test/java/com/quickflow/task/TaskControllerTest.java",
+        "frontend/src/app/features/tasks/tasks.store.spec.ts",
+        "frontend/src/app/features/tasks/task-form-dialog.component.spec.ts",
+        "loops/loop-3-testing/outputs/curl/phase-2-curl.sh"
+      ],
+      "started": "2026-10-03T19:34:50+03:00",
+      "ended": "2026-10-03T19:38:06+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-2.json",
+      "closed_bugs": [
+        "loops/loop-3-testing/outputs/bugs/BUG-P2-001.md"
+      ]
+    },
+    "3": {
+      "status": "passed",
+      "mode": "test",
+      "trial": 0,
+      "tasks": [
+        "T047",
+        "T048",
+        "T049",
+        "T050"
+      ],
+      "ticked": [
+        "T047",
+        "T048",
+        "T049",
+        "T050"
+      ],
+      "started": "2026-10-03T19:51:56+03:00",
+      "totals": {
+        "total": 37,
+        "passed": 37,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 98.0,
+        "backend_branch_pct": 92.4,
+        "frontend_line_pct": 57.68,
+        "frontend_branch_pct": 47.45
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "backend/src/test/java/com/quickflow/habit/HabitStatsCalculatorTest.java",
+        "backend/src/test/java/com/quickflow/habit/HabitServiceTest.java",
+        "backend/src/test/java/com/quickflow/habit/MutableClock.java",
+        "backend/src/test/java/com/quickflow/habit/HabitControllerTest.java",
+        "backend/src/test/java/com/quickflow/habit/HabitCompletionRepositoryTest.java",
+        "frontend/src/app/features/habits/habits.store.spec.ts",
+        "frontend/src/app/features/habits/habit-card.component.spec.ts",
+        "loops/loop-3-testing/outputs/curl/phase-3-curl.sh"
+      ],
+      "ended": "2026-10-03T20:05:18+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-3.json"
+    },
+    "4": {
+      "status": "passed",
+      "mode": "test",
+      "trial": 0,
+      "tasks": [
+        "T062",
+        "T063",
+        "T064",
+        "T065"
+      ],
+      "ticked": [
+        "T062",
+        "T063",
+        "T064",
+        "T065"
+      ],
+      "started": "2026-10-03T20:19:20+03:00",
+      "totals": {
+        "total": 34,
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 97.7,
+        "backend_branch_pct": 93.5,
+        "frontend_line_pct": 56.09,
+        "frontend_branch_pct": 43.55
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "backend/src/test/java/com/quickflow/learning/LearningStatusCalculatorTest.java",
+        "backend/src/test/java/com/quickflow/learning/LearningServiceTest.java",
+        "backend/src/test/java/com/quickflow/learning/MutableClock.java",
+        "backend/src/test/java/com/quickflow/learning/LearningControllerTest.java",
+        "backend/src/test/java/com/quickflow/learning/LearningCardRepositoryTest.java",
+        "frontend/src/app/features/learning/learning.store.spec.ts",
+        "frontend/src/app/features/learning/learning-card.component.spec.ts",
+        "loops/loop-3-testing/outputs/curl/phase-4-curl.sh"
+      ],
+      "ended": "2026-10-03T20:31:00+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-4.json"
+    },
+    "5": {
+      "status": "passed",
+      "mode": "test",
+      "trial": 0,
+      "tasks": [
+        "T079",
+        "T080",
+        "T081",
+        "T082"
+      ],
+      "ticked": [
+        "T079",
+        "T080",
+        "T081",
+        "T082"
+      ],
+      "started": "2026-10-03T20:44:55+03:00",
+      "totals": {
+        "total": 33,
+        "passed": 33,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 97.8,
+        "backend_branch_pct": 95.9,
+        "frontend_line_pct": 55.34,
+        "frontend_branch_pct": 43.37
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "backend/src/test/java/com/quickflow/plan/PlanStatusCalculatorTest.java",
+        "backend/src/test/java/com/quickflow/plan/PlanItemCompletionServiceTest.java",
+        "backend/src/test/java/com/quickflow/plan/MutableClock.java",
+        "backend/src/test/java/com/quickflow/plan/PlanServiceTest.java",
+        "backend/src/test/java/com/quickflow/plan/PlanControllerTest.java",
+        "frontend/src/app/features/plans/plans.store.spec.ts",
+        "frontend/src/app/core/plan-start-watcher.service.spec.ts",
+        "frontend/src/app/features/plans/plan-builder-dialog.component.spec.ts",
+        "loops/loop-3-testing/outputs/curl/phase-5-curl.sh",
+        "loops/loop-3-testing/outputs/curl/phase-5-ui-seed.sh"
+      ],
+      "ended": "2026-10-03T20:59:30+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-5.json"
+    },
+    "6": {
+      "status": "passed",
+      "mode": "test",
+      "trial": 0,
+      "tasks": [
+        "T089",
+        "T090",
+        "T091"
+      ],
+      "ticked": [
+        "T089",
+        "T090",
+        "T091"
+      ],
+      "started": "2026-10-03T21:10:15+03:00",
+      "totals": {
+        "total": 31,
+        "passed": 31,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 97.7,
+        "backend_branch_pct": 95.9,
+        "frontend_line_pct": 57.22,
+        "frontend_branch_pct": 43.98
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "backend/src/test/java/com/quickflow/settings/SettingsServiceTest.java",
+        "backend/src/test/java/com/quickflow/settings/SettingsControllerTest.java",
+        "frontend/src/app/core/settings.store.spec.ts",
+        "frontend/src/app/features/settings/settings-page.component.spec.ts",
+        "loops/loop-3-testing/outputs/curl/phase-6-curl.sh"
+      ],
+      "ended": "2026-10-03T21:17:18+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-6.json"
+    },
+    "7": {
+      "status": "passed",
+      "mode": "test",
+      "trial": 0,
+      "tasks": [
+        "T098",
+        "T099",
+        "T100"
+      ],
+      "ticked": [
+        "T098",
+        "T099",
+        "T100"
+      ],
+      "started": "2026-10-04T00:23:55+03:00",
+      "totals": {
+        "total": 35,
+        "passed": 35,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 97.8,
+        "backend_branch_pct": 96.2,
+        "frontend_line_pct": 65.68,
+        "frontend_branch_pct": 51.13
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "backend/src/test/java/com/quickflow/dashboard/DashboardServiceTest.java",
+        "backend/src/test/java/com/quickflow/dashboard/DashboardControllerTest.java",
+        "backend/src/test/java/com/quickflow/dashboard/MutableClock.java",
+        "frontend/src/app/features/dashboard/dashboard.store.spec.ts",
+        "frontend/src/app/features/dashboard/dashboard-page.component.spec.ts",
+        "loops/loop-3-testing/outputs/curl/phase-7-curl.sh",
+        "loops/loop-3-testing/outputs/curl/phase-7-ui-seed.sh"
+      ],
+      "ended": "2026-10-04T00:37:00+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-7.json"
+    },
+    "8": {
+      "status": "passed",
+      "mode": "retest",
+      "trial": 1,
+      "tasks": [
+        "T105",
+        "T106",
+        "T107"
+      ],
+      "ticked": [
+        "T105",
+        "T106",
+        "T107"
+      ],
+      "started": "2026-10-04T00:47:45+03:00",
+      "totals": {
+        "total": 28,
+        "passed": 28,
+        "failed": 0,
+        "skipped": 0
+      },
+      "coverage": {
+        "backend_line_pct": 97.8,
+        "backend_branch_pct": 96.2,
+        "frontend_line_pct": 65.51,
+        "frontend_branch_pct": 50.99
+      },
+      "failed_test_cases": [],
+      "open_bugs": [],
+      "test_code": [
+        "loops/loop-3-testing/outputs/curl/phase-8-perf.sh",
+        "loops/loop-3-testing/outputs/curl/phase-8-validation.sh",
+        "loops/loop-3-testing/outputs/curl/phase-8-e2e-verify.sh",
+        "loops/loop-3-testing/outputs/playwright/p8-a11y-audit.js",
+        "loops/loop-3-testing/outputs/playwright/p8-keyboard-coverage.js",
+        "loops/loop-3-testing/outputs/playwright/p8-keyboard-actions.js",
+        "loops/loop-3-testing/outputs/playwright/p8-e2e-prd11.js",
+        "loops/loop-3-testing/outputs/playwright/p8-e2e-prd11-part2.js",
+        "loops/loop-3-testing/outputs/playwright/p8-perf-ui.js",
+        "loops/loop-3-testing/outputs/playwright/p8-e2e-prd11-t1.js",
+        "loops/loop-3-testing/outputs/curl/phase-8-e2e-verify-t1.sh"
+      ],
+      "e2e_ids": {
+        "task": 2118,
+        "habit": 55,
+        "card": 34,
+        "planTask": 2119,
+        "plan": 41,
+        "curlTask": 2120,
+        "runningPlan": 42,
+        "upcomingPlan": 43
+      },
+      "backend_pid_file": "loops/loop-3-testing/state/backend.pid",
+      "ended": "2026-10-04T01:39:14+03:00",
+      "handoff": "loops/loop-3-testing/state/handoff-phase-8.json",
+      "started_t1": "2026-10-04T01:33:52+03:00",
+      "closed_bugs": [
+        "loops/loop-3-testing/outputs/bugs/BUG-P8-001.md",
+        "loops/loop-3-testing/outputs/bugs/BUG-P8-002.md"
+      ],
+      "e2e_ids_t1": {
+        "task": 4134,
+        "habit": 63,
+        "card": 39,
+        "planTask": 4135,
+        "plan": 48,
+        "runningPlan": 49,
+        "upcomingPlan": 50
+      }
+    }
+  }
+}

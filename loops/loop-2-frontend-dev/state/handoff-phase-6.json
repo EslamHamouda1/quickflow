@@ -1,0 +1,16 @@
+{
+  "loop": "frontend-dev",
+  "phase": 6,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "ui_url": "http://localhost:4200",
+  "phase_file": "loops/loop-2-frontend-dev/outputs/phase-6-frontend.md",
+  "client_generated_from": "backend/openapi/openapi.json",
+  "tasks_done": ["T086", "T087", "T088"],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T21:03:29+03:00",
+  "ended": "2026-10-03T21:09:28+03:00",
+  "notes": "SettingsStore (core/settings.store.ts) loaded via provideAppInitializer, falls back to defaults if backend is down; defaultViewGuard on '' redirects to the configured landing page; Settings page (display name 1-80 with validation, in-app/browser switches with Notification.requestPermission and denied state, landing-page select, save toast, reset); NotificationService prefs synced from settings (in-app off suppresses plan-start toast, browser on + granted raises system notification). Build pass, 164 unit tests pass, 12 Playwright checks pass. Settings left at defaults; test data removed."
+}

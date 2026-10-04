@@ -1,0 +1,60 @@
+BE-001 | 201 | 201 | PASS | id=12 status=IN_PROGRESS rest=3599 title='p5qa22495 in progress'
+BE-002 | 201 | 201 | PASS | id=13 status=NOT_STARTED rest=null
+BE-003 | 201 | 201 | PASS | id=14 end passed with open items → COMPLETED
+BE-004 | 201 | 201 | PASS | 200-char title boundary id=15
+BE-005 | 200 | 200 | PASS | order prio asc, start asc: 13,14,12,15 (P=12 PU=13 PP=14 PL=15)
+BE-006 | 200 | 200 | PASS | filter IN_PROGRESS
+BE-007 | 200 | 200 | PASS | filter NOT_STARTED
+BE-008 | 200 | 200 | PASS | filter COMPLETED
+BE-009 | 400 | 400 | PASS | invalid status enum
+BE-010 | 200 | 200 | PASS | get
+BE-011 | 404 | 404 | PASS | get unknown: Plan 999999 not found
+BE-012 | 400 | 400 | PASS | get non-numeric id
+BE-013 | 400 | 400 | PASS | empty title: Title must be 1-200 characters
+BE-014 | 400 | 400 | PASS | blank title
+BE-015 | 400 | 400 | PASS | 201-char title
+BE-016 | 400 | 400 | PASS | no items: Select at least one item
+BE-017 | 400 | 400 | PASS | end == start: End date-time must be after start date-time
+BE-018 | 400 | 400 | PASS | end < start
+BE-019 | 400 | 400 | PASS | duration 0
+BE-020 | 400 | 400 | PASS | priority 0
+BE-021 | 400 | 400 | PASS | missing duration + priority
+BE-022 | 400 | 400 | PASS | missing start + end
+BE-023 | 400 | 400 | PASS | item without sourceType
+BE-024 | 400 | 400 | PASS | item without sourceId
+BE-025 | 400 | 400 | PASS | invalid sourceType enum
+BE-026 | 400 | 400 | PASS | archived task: Task 61 does not exist or is archived
+BE-027 | 400 | 400 | PASS | inactive habit: Habit 30 does not exist or is inactive
+BE-028 | 400 | 400 | PASS | unknown card
+BE-029 | 400 | 400 | PASS | duplicate source: Duplicate item TASK 59
+BE-030 | 400 | 400 | PASS | malformed json
+BE-031 | 200 | 200 | PASS | task item done → 33%
+BE-032 | 200 | 200 | PASS | task side effect → DONE
+BE-033 | 200 | 200 | PASS | habit item done → 67%
+BE-034 | 200 | 200 | PASS | habit has today's completion (1)
+BE-035 | 200 | 200 | PASS | habit undo+redo: still 1 completion
+BE-036 | 200 | 200 | PASS | all done → COMPLETED 100%
+BE-037 | 200 | 200 | PASS | learning card untouched
+BE-038 | 200 | 200 | PASS | undo task item → IN_PROGRESS
+BE-039 | 200 | 200 | PASS | undo never reverts task
+BE-040 | 200 | 200 | PASS | undo never reverts habit
+BE-041 | 400 | 400 | PASS | missing done
+BE-042 | 400 | 400 | PASS | done null
+BE-043 | 404 | 404 | PASS | unknown item
+BE-044 | 404 | 404 | PASS | unknown plan
+BE-045 | 404 | 404 | PASS | item of another plan
+BE-046 | 400 | 400 | PASS | non-numeric itemId
+BE-047 | 200 | 200 | PASS | ack → 2026-10-03T20:52:57.859849+03:00
+BE-048 | 200 | 200 | PASS | idempotent: 2026-10-03T20:52:57.859849+03:00
+BE-049 | 404 | 404 | PASS | ack unknown plan
+BE-050 | 400 | 400 | PASS | ack non-numeric id
+BE-051 | 200 | 200 | PASS | deleted task kept as removed source
+BE-052 | 200 | 200 | PASS | removed item still counts: 2/3
+BE-053 | 204 | 204 | PASS | delete (Accept problem+json)
+BE-054 | 404 | 404 | PASS | deleted plan gone
+BE-055 | 404 | 404 | PASS | delete again
+BE-056 | 400 | 400 | PASS | delete non-numeric id
+BE-057 | 200 | 200 | PASS | habit untouched after plan delete
+BE-058 | 200 | 200 | PASS | card untouched after plan delete
+BE-059 | 200 | 200 | PASS | cleanup: no p5qa22495 plans left
+TOTAL pass=59 fail=0

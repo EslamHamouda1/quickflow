@@ -1,0 +1,18 @@
+{
+  "loop": "backend-dev",
+  "phase": 1,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "backend_url": "http://localhost:8080",
+  "swagger_url": "http://localhost:8080/v3/api-docs",
+  "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+  "swagger_file": "backend/openapi/openapi.json",
+  "phase_file": "loops/loop-1-backend-dev/outputs/phase-1-backend.md",
+  "tasks_done": ["T001", "T002", "T003", "T004", "T005", "T006", "T007", "T008"],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T18:26:48+03:00",
+  "ended": "2026-10-03T18:32:18+03:00",
+  "notes": "Boot 4.1.1/Java 25 bootstrap OK; springdoc-openapi-maven-plugin 1.5 and jacoco 0.8.15 pinned. mvnw verify passes (3 tests incl. ProblemJsonSmokeTest), -Popenapi writes openapi.json (OpenAPI 3.1.0, info/servers/tags = contract, no paths yet). CORS for http://localhost:4200 on /api/** verified (preflight 200, foreign origin 403). Errors are application/problem+json with top-level errors[]; framework errors also problem+json (spring.mvc.problemdetails.enabled). Backend running; state/backend.pid = Maven JVM pid."
+}

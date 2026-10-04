@@ -1,0 +1,54 @@
+BE-001 | 201 | 201 | PASS | id=14 name='p3qa24175 water' active=true streak=0 rate=0
+BE-002 | 201 | 201 | PASS | id=15 weekly description=null
+BE-003 | 201 | 201 | PASS | boundary 150/2000 accepted id=16
+BE-004 | 400 | 400 | PASS | empty name: Name is required; Name must be 1-150 characters
+BE-005 | 400 | 400 | PASS | blank name
+BE-006 | 400 | 400 | PASS | missing name
+BE-007 | 400 | 400 | PASS | 151 chars: Name must be 1-150 characters
+BE-008 | 400 | 400 | PASS | 2001 desc: Description must be at most 2000 characters
+BE-009 | 400 | 400 | PASS | missing frequency: Frequency is required
+BE-010 | 400 | 400 | PASS | invalid frequency
+BE-011 | 400 | 400 | PASS | malformed json
+BE-012 | 200 | 200 | PASS | get id=14
+BE-013 | 404 | 404 | PASS | detail=Habit 999999 not found
+BE-014 | 400 | 400 | PASS | bad id
+BE-015 | 200 | 200 | PASS | newest first: 16,15,14
+BE-016 | 400 | 400 | PASS | active=bogus
+BE-017 | 200 | 200 | PASS | name='p3qa24175 water2' desc=null
+BE-018 | 400 | 400 | PASS | empty name
+BE-019 | 400 | 400 | PASS | 151 name
+BE-020 | 400 | 400 | PASS | bad frequency
+BE-021 | 404 | 404 | PASS | missing
+BE-022 | 201 | 201 | PASS | no body: today=2026-10-03 completedToday=true streak=1 rate=100
+BE-023 | 409 | 409 | PASS | duplicate: Habit is already completed on 2026-10-03
+BE-024 | 409 | 409 | PASS | duplicate explicit date
+BE-025 | 409 | 409 | PASS | duplicate {} body (what the UI sends)
+BE-026 | 201 | 201 | PASS | yesterday: streak=2 rate=100
+BE-027 | 400 | 400 | PASS | future: Completion date must not be in the future
+BE-028 | 400 | 400 | PASS | invalid date fields=date
+BE-029 | 404 | 404 | PASS | unknown habit
+BE-030 | 1x201/5x409/1row | 1x201/5x409/1row | PASS | parallel duplicate guard
+BE-031 | 200 | 200 | PASS | newest first: 2026-10-03,2026-10-02
+BE-032 | 404 | 404 | PASS | unknown habit
+BE-033 | 200 | 200 | PASS | undo today: completedToday=false streak=1 last=2026-10-02
+BE-034 | 404 | 404 | PASS | missing completion: Habit 14 has no completion on 2026-10-03
+BE-035 | 400 | 400 | PASS | bad date
+BE-036 | 404 | 404 | PASS | unknown habit
+BE-037 | 200 | 200 | PASS | undo with generated-client Accept header
+BE-038 | 201 | 201 | PASS | weekly Monday 2026-09-28: completedToday=false doneForCurrentPeriod=true streak=1 rate=100
+BE-039 | 200 | 200 | PASS | weekly undo: doneForCurrentPeriod=false
+BE-040 | 200 | 200 | PASS | active=false stats kept completedToday=true
+BE-041 | 200 | 200 | PASS | active=true excludes 14
+BE-042 | 200 | 200 | PASS | active=false includes 14
+BE-043 | 200 | 200 | PASS | history kept: 1 completions
+BE-044 | 200 | 200 | PASS | reactivated
+BE-045 | 404 | 404 | PASS | deactivate unknown
+BE-046 | 404 | 404 | PASS | activate unknown
+BE-047 | 400 | 400 | PASS | activate bad id
+BE-048 | 204 | 204 | PASS | delete (Accept problem+json)
+BE-049 | 404 | 404 | PASS | deleted habit gone
+BE-050 | 404 | 404 | PASS | completions of deleted habit gone
+BE-051 | 404 | 404 | PASS | delete again
+BE-052 | 400 | 400 | PASS | delete bad id
+BE-053 | 200 | 200 | PASS | cleanup: no p3qa24175 habits left
+TOTAL pass=53 fail=0

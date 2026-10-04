@@ -1,0 +1,21 @@
+[
+  {
+    "round": 1,
+    "time": "2026-10-03T17:48:30+03:00",
+    "questions": [
+      {"q": "How should the app know which tasks were \"completed today\"?", "options": ["A: completed-at timestamp set on Done, cleared on leaving Done", "B: use updated-at of Done tasks", "C: drop the metric"], "chosen": "A", "reason": "Recommended; updated-at changes on any edit so B gives wrong counts; PRD FR-09 requires the metric"},
+      {"q": "What does a habit's \"completion progress\" show?", "options": ["A: current-period state + streak + rate over 30 days / 12 weeks", "B: streak only", "C: % of habits done today only"], "chosen": "A", "reason": "Recommended; covers PRD streak indicator and progress story"},
+      {"q": "How many items per list must the app handle without paging?", "options": ["A: up to 1,000 per type, no paging", "B: server paging 20/page", "C: infinite scroll"], "chosen": "A", "reason": "Recommended; single-user MVP, keeps API/UI small and filters instant"},
+      {"q": "What accessibility level must the UI meet?", "options": ["A: WCAG 2.1 AA", "B: none", "C: WCAG AAA"], "chosen": "A", "reason": "Recommended; industry baseline, testable"},
+      {"q": "Can two plans share the same priority order?", "options": ["A: yes, ties by earlier start", "B: unique, auto-shift others"], "chosen": "A", "reason": "Recommended; drag-reorder is out of scope, avoids cascade updates"}
+    ],
+    "sections_touched": ["Clarifications", "User Story 1", "User Story 2", "FR-001", "FR-011", "FR-025", "FR-034", "FR-035", "Key Entities", "SC-009", "SC-010"]
+  },
+  {
+    "round": 2,
+    "time": "2026-10-03T17:49:00+03:00",
+    "questions": [],
+    "result": "No critical ambiguities detected worth formal clarification. Remaining Partial categories (observability, import/export, multi-tab concurrency) are low impact for a local single-user MVP.",
+    "sections_touched": []
+  }
+]

@@ -1,0 +1,18 @@
+stack:
+  backend:
+    java: "JDK 25 (LTS)"
+    spring_boot: "4.1.1"
+    springdoc_openapi_starter_webmvc_ui: "3.1.1"
+    springdoc_openapi_maven_plugin: "latest release at setup (pin it in pom.xml)"
+    jacoco_maven_plugin: "latest release at setup that supports Java 25 (pin it in pom.xml)"
+    build: "Maven wrapper from start.spring.io"
+    db: "H2 (Boot-managed): default = file ./data/quickflow, test = file ./data/test, openapi = in-memory"
+    unit_tests: "spring-boot-starter-test + spring-boot-starter-webmvc-test + spring-boot-starter-data-jpa-test; @MockitoBean, MockMvcTester"
+  frontend:
+    node: "24.x LTS (>= 24.15)"
+    angular: "22.2.0 (standalone + signals, zoneless)"
+    api_client: "@openapitools/openapi-generator-cli 2.41.0 (typescript-angular)"
+  testing:
+    playwright_mcp: "@playwright/mcp 0.0.82 (headless, chromium)"
+  planning:
+    spec_kit: "v1.0.11"

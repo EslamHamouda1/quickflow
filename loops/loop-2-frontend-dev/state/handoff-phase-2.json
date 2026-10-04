@@ -1,0 +1,16 @@
+{
+  "loop": "frontend-dev",
+  "phase": 2,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "ui_url": "http://localhost:4200",
+  "phase_file": "loops/loop-2-frontend-dev/outputs/phase-2-frontend.md",
+  "client_generated_from": "backend/openapi/openapi.json",
+  "tasks_done": ["T027", "T028", "T029", "T030", "T031"],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T19:10:39+03:00",
+  "ended": "2026-10-03T19:20:41+03:00",
+  "notes": "Tasks page done: signal store over the generated TasksService (optimistic complete/status/archive/restore/delete with rollback), create/edit dialog (client and server field errors), toolbar (200 ms debounced search, filters, sort, overdue, archived view), list with enter/leave/FLIP animations and empty/filtered-empty/archived-empty states, ?new=1 quick-add. Build passes, 31/31 existing unit tests pass, 18 Playwright checks pass with 0 app console errors, test data removed. BACKEND DEFECT: DELETE /api/tasks/{id} with 'Accept: application/problem+json' (what the generated deleteTask sends) returns 406 with no CORS headers. Frontend works around it with core/accept-header.interceptor.ts, but backend-dev should accept problem+json on body-less operations (every future DELETE will hit this)."
+}

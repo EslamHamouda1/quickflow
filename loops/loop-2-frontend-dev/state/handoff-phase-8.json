@@ -1,0 +1,11 @@
+{
+  "loop": "frontend-dev", "phase": 8, "mode": "fix", "trial": 1,
+  "status": "done",
+  "ui_url": "http://localhost:4200",
+  "phase_file": "loops/loop-2-frontend-dev/outputs/phase-8-frontend.md",
+  "client_generated_from": "backend/openapi/openapi.json",
+  "tasks_done": ["T103", "T104"], "tasks_open": [],
+  "bugs_fixed": ["loops/loop-3-testing/outputs/bugs/BUG-P8-001.md", "loops/loop-3-testing/outputs/bugs/BUG-P8-002.md"],
+  "started": "2026-10-04T01:23:17+03:00", "ended": "2026-10-04T01:33:23+03:00",
+  "notes": "BUG-P8-001: bulk task-list updates skip row enter/leave animations (callback form + linkedSignal diff, only changes of 20 rows or fewer animate); FLIP reads before writes and stays near the viewport; Intl formatters cached; clearing the search applies at once. With 1,013 tasks in ng serve dev mode, search/filter takes 70-345 ms (was 3.5-37 s) with normal and reduced motion. BUG-P8-002: new root FocusRestorer (core/focus-restorer.ts, started in app.config) puts focus back on the same control, its re-rendered copy, the next row's matching control, or <main>. p8-keyboard-actions.js 31/31 PASS and focus never left on BODY. Build ok, 218/218 unit tests, no console errors. Perf seed data removed with phase-8-perf.sh cleanup."
+}

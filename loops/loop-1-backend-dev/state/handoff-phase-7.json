@@ -1,0 +1,22 @@
+{
+  "loop": "backend-dev",
+  "phase": 7,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "backend_url": "http://localhost:8080",
+  "swagger_url": "http://localhost:8080/v3/api-docs",
+  "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+  "swagger_file": "backend/openapi/openapi.json",
+  "phase_file": "loops/loop-1-backend-dev/outputs/phase-7-backend.md",
+  "tasks_done": [
+    "T092",
+    "T093",
+    "T094"
+  ],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-03T21:17:40+03:00",
+  "ended": "2026-10-03T21:21:30+03:00",
+  "notes": "GET /api/dashboard (getDashboard) implemented: DashboardResponse(@Schema Dashboard) + DashboardTasks/Habits/Plans/Learning DTOs, DashboardService reusing TaskService/HabitService/PlanService/learning repositories, DashboardController. mvnw verify passes; full swagger matches all 37 contract operations and all schemas (properties + required). Backend restarted (stale old process killed) and curl-verified: metrics equal list-endpoint counts, archived excluded, 405 on POST. Seeded curl data deleted afterwards."
+}

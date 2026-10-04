@@ -1,0 +1,24 @@
+{
+  "enabledMcpjsonServers": [
+    "playwright"
+  ],
+  "permissions": {
+    "allow": [
+      "mcp__playwright",
+      "Bash(specify:*)",
+      "Bash(uv tool install specify-cli:*)",
+      "Bash(./mvnw:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(curl:*)",
+      "Bash(jq:*)",
+      "Bash(date:*)",
+      "Bash(unzip:*)",
+      "Bash(scripts/preflight.sh:*)",
+      "Bash(bash scripts/preflight.sh:*)",
+      "Bash(nohup:*)",
+      "Bash(git:*)",
+      "Bash(.specify/scripts/bash/*:*)"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "loop": "backend-dev",
+  "phase": 2,
+  "mode": "fix",
+  "trial": 1,
+  "status": "done",
+  "backend_url": "http://localhost:8080",
+  "swagger_url": "http://localhost:8080/v3/api-docs",
+  "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+  "swagger_file": "backend/openapi/openapi.json",
+  "phase_file": "loops/loop-1-backend-dev/outputs/phase-2-backend.md",
+  "tasks_done": [
+    "T021",
+    "T022",
+    "T023",
+    "T024",
+    "T025",
+    "T026"
+  ],
+  "tasks_open": [],
+  "bugs_fixed": [
+    "loops/loop-3-testing/outputs/bugs/BUG-P2-001.md"
+  ],
+  "started": "2026-10-03T19:32:50+03:00",
+  "ended": "2026-10-03T19:34:26+03:00",
+  "notes": "BUG-P2-001 fixed: deleteTask now produces application/json and application/problem+json, so Accept: application/problem+json gives 204 (deleted) / 404 problem+json, both with CORS headers, instead of 406. Regression unit test added; mvnw verify passes. Regenerated swagger is unchanged (still matches the contract). Phase regression curl checks pass. Backend restarted and running on :8080. The frontend accept-header.interceptor workaround is no longer needed for task delete (frontend-dev decides)."
+}

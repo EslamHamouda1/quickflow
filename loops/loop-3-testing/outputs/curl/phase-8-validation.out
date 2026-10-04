@@ -1,0 +1,11 @@
+V-01 http://localhost:8080/api/tasks exp 400 got 400 application/problem+json 0.001734 {"title":"Bad Request","errors":["title","title"]} PASS
+V-02 http://localhost:8080/api/habits exp 400 got 400 application/problem+json 0.002020 {"title":"Bad Request","errors":["frequency"]} PASS
+V-03 http://localhost:8080/api/learning-cards exp 400 got 400 application/problem+json 0.001370 {"title":"Bad Request","errors":["title","title"]} PASS
+V-04 http://localhost:8080/api/plans exp 400 got 400 application/problem+json 0.001095 {"title":"Bad Request","errors":["startDateTime","endDateTime","estimatedDurationMinutes","items","priorityOrder"]} PASS
+V-05 http://localhost:8080/api/settings exp 400 got 400 application/problem+json 0.001372 {"title":"Bad Request","errors":["browserNotifications","defaultView","inAppNotifications","displayName","displayName"]} PASS
+V-06 http://localhost:8080/api/tasks?sort=bogus exp 400 got 400 application/problem+json 0.000915 {"title":"Bad Request","errors":["sort"]} PASS
+N-01 http://localhost:8080/api/tasks/999999 exp 404 got 404 application/problem+json 0.001295 {"title":"Not Found","errors":[]} PASS
+N-02 http://localhost:8080/api/habits/999999 exp 404 got 404 application/problem+json 0.001973 {"title":"Not Found","errors":[]} PASS
+N-03 http://localhost:8080/api/learning-cards/999999 exp 404 got 404 application/problem+json 0.001244 {"title":"Not Found","errors":[]} PASS
+N-04 http://localhost:8080/api/plans/999999 exp 404 got 404 application/problem+json 0.001427 {"title":"Not Found","errors":[]} PASS
+TOTAL: 10 pass, 0 fail

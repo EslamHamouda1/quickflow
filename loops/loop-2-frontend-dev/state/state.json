@@ -1,0 +1,93 @@
+{
+  "status": "done",
+  "current_phase": 8,
+  "mode": "fix",
+  "trial": 1,
+  "started": "2026-10-04T01:23:17+03:00",
+  "ended": "2026-10-04T01:33:23+03:00",
+  "phases": {
+    "1": {
+      "status": "done",
+      "tasks_done": [
+        "T009",
+        "T010",
+        "T011",
+        "T012",
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017"
+      ],
+      "handoff": "state/handoff-phase-1.json"
+    },
+    "2": {
+      "status": "done",
+      "tasks_done": [
+        "T027",
+        "T028",
+        "T029",
+        "T030",
+        "T031"
+      ],
+      "handoff": "state/handoff-phase-2.json"
+    },
+    "3": {
+      "status": "done",
+      "tasks_done": [
+        "T043",
+        "T044",
+        "T045",
+        "T046"
+      ],
+      "handoff": "state/handoff-phase-3.json"
+    },
+    "4": {
+      "status": "done",
+      "tasks_done": [
+        "T058",
+        "T059",
+        "T060",
+        "T061"
+      ],
+      "handoff": "state/handoff-phase-4.json"
+    },
+    "5": {
+      "status": "done",
+      "tasks_done": [
+        "T074",
+        "T075",
+        "T076",
+        "T077",
+        "T078"
+      ],
+      "handoff": "state/handoff-phase-5.json"
+    },
+    "6": {
+      "status": "done",
+      "tasks_done": [
+        "T086",
+        "T087",
+        "T088"
+      ],
+      "handoff": "state/handoff-phase-6.json"
+    },
+    "7": {
+      "status": "done",
+      "tasks_done": [
+        "T095",
+        "T096",
+        "T097"
+      ],
+      "handoff": "state/handoff-phase-7.json"
+    },
+    "8": {
+      "status": "done",
+      "tasks_done": [
+        "T103",
+        "T104"
+      ],
+      "handoff": "state/handoff-phase-8.json"
+    }
+  }
+}

@@ -1,0 +1,361 @@
+[
+  {
+    "round": 1,
+    "time": "2026-10-03T17:57:30+03:00",
+    "analyst": "loop-0 (self)",
+    "findings": [
+      {
+        "id": "C1",
+        "severity": "CRITICAL",
+        "artifact": "plan.md, research.md, tasks.md T016/T020/T104/T105, spec.md SC-010",
+        "issue": "axe-core added though tech-stack.yaml is the only source of technologies (constitution I)",
+        "fix": "Removed axe-core; accessibility checked with Playwright MCP accessibility snapshot, contrast evaluation, reduced-motion emulation, keyboard walkthrough; T016 repurposed to reduced-motion signal; SC-010 reworded"
+      },
+      {
+        "id": "I1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T035/T041/T050/T072/T082",
+        "issue": "operation counts wrong (tasks 9\u21928, habits 9\u219210, plans 7\u21926)",
+        "fix": "Corrected counts to match contracts/openapi.yaml"
+      },
+      {
+        "id": "U1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T059/T060",
+        "issue": "manual learning status (FR-013, US3-5) had no UI task",
+        "fix": "Edit mode with status select in card form dialog + edit action on card"
+      },
+      {
+        "id": "A1",
+        "severity": "MEDIUM",
+        "artifact": "spec.md Edge Cases",
+        "issue": "missed-start notification wording unclear",
+        "fix": "Plan created after start \u2192 notified once; Completed plans never notified"
+      },
+      {
+        "id": "A2",
+        "severity": "LOW",
+        "artifact": "spec.md US5-3",
+        "issue": "'habits due in current period' ambiguous",
+        "fix": "All active habits with done-for-current-period state"
+      },
+      {
+        "id": "A3",
+        "severity": "MEDIUM",
+        "artifact": "spec.md FR-032",
+        "issue": "'polished/smooth' not measurable",
+        "fix": "\u2264 250 ms, non-blocking, reduced-motion disabled, 375\u20131440 px"
+      },
+      {
+        "id": "L1",
+        "severity": "LOW",
+        "artifact": "tasks.md T001, plan.md, loop-1 instructions",
+        "issue": "actuator dependency unused (constitution VI)",
+        "fix": "Removed"
+      }
+    ],
+    "infra_fixes": [
+      "loop-3 Loop-instructions: ng test --code-coverage \u2192 --coverage (Vitest builder)"
+    ]
+  },
+  {
+    "round": 2,
+    "time": "2026-10-03T18:01:52+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "C1",
+        "severity": "CRITICAL",
+        "artifact": "tasks.md T018-T020, T105-T107",
+        "issue": "TEST tasks without user-story trace (constitution IV)",
+        "fix": "Added trace notes to each"
+      },
+      {
+        "id": "F1",
+        "severity": "HIGH",
+        "artifact": "plan.md delivery phases",
+        "issue": "6-phase table vs 8 phases in tasks.md",
+        "fix": "Plan table rewritten to the 8 phases"
+      },
+      {
+        "id": "F2",
+        "severity": "MEDIUM",
+        "artifact": "spec.md US5-1",
+        "issue": "dashboard always landing vs configurable default view",
+        "fix": "Conditioned on default view = Dashboard"
+      },
+      {
+        "id": "F3",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T075",
+        "issue": "depends on Settings (Phase 6) and plans store, wrongly [P]",
+        "fix": "Browser notification if permitted; settings applied in T088; removed [P]; consumes plans.store"
+      },
+      {
+        "id": "U1",
+        "severity": "MEDIUM",
+        "artifact": "spec.md US2-4, tasks.md T045/T096",
+        "issue": "weekly habit toggle-off undefined (404)",
+        "fix": "Toggle bound to completedToday; weekly 'done this week' badge; uncomplete lastCompletedDate"
+      },
+      {
+        "id": "U2",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T003/T032/T048/T063",
+        "issue": "test profile H2 file never activated",
+        "fix": "test resources application.yaml activates profile test; @AutoConfigureTestDatabase(replace = NONE)"
+      },
+      {
+        "id": "I1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T009, research.md R14",
+        "issue": "Vitest coverage provider not in tech-stack",
+        "fix": "Packages required by Angular CLI 22.2.0 itself count as the pinned Angular toolchain; no other libraries"
+      },
+      {
+        "id": "F4",
+        "severity": "MEDIUM",
+        "artifact": "contracts/openapi.yaml, tasks.md T007",
+        "issue": "400 on type mismatch not declared; springdoc generic responses",
+        "fix": "400 added to 20 operations; springdoc.override-with-generic-response=false"
+      },
+      {
+        "id": "G1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T106",
+        "issue": "SC-002 only measured for task list",
+        "fix": "Timing for create/update/delete across entities"
+      },
+      {
+        "id": "G2",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T012/T030/T045/T060/T077/T103",
+        "issue": "long-text truncation edge case uncovered",
+        "fix": "Truncate utilities + per-page truncation + audit"
+      },
+      {
+        "id": "A1",
+        "severity": "MEDIUM",
+        "artifact": "spec.md FR-016, US3-5",
+        "issue": "manual status lifetime unspecified",
+        "fix": "Persists until next milestone change"
+      },
+      {
+        "id": "A2",
+        "severity": "LOW",
+        "artifact": "spec.md US5-2, data-model.md",
+        "issue": "dueToday excludes Done only in tasks",
+        "fix": "Spec and data-model state non-archived, not Done"
+      },
+      {
+        "id": "F5",
+        "severity": "LOW",
+        "artifact": "data-model.md",
+        "issue": "inProgress projection vs full Plan",
+        "fix": "Full Plan"
+      },
+      {
+        "id": "F6",
+        "severity": "LOW",
+        "artifact": "plan.md structure tree",
+        "issue": "core/shared files mismatch tasks",
+        "fix": "Tree updated"
+      },
+      {
+        "id": "U3",
+        "severity": "LOW",
+        "artifact": "spec.md FR-007/014/015/017/029",
+        "issue": "length limits only in data-model",
+        "fix": "Limits added to spec"
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "time": "2026-10-03T18:06:37+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "HIGH",
+        "artifact": "tasks.md T007/T023/T039/T054/T069/T084/T092 + per-phase swagger checks",
+        "issue": "springdoc schema names (DTO class names) and inline enums would not match contract schema names/$ref enums until T102",
+        "fix": "@Schema(name=...) on response DTOs, documentation Problem/FieldError schemas, @Schema(enumAsRef=true) on enums, TaskSort/SortDirection enums; per-phase checks now include status codes and schema names"
+      },
+      {
+        "id": "U1",
+        "severity": "MEDIUM",
+        "artifact": "data-model.md dashboard, tasks.md T093",
+        "issue": "archived qualifier missing on overdue/doneCount/completedTodayCount",
+        "fix": "All task metrics non-archived"
+      },
+      {
+        "id": "U2",
+        "severity": "MEDIUM",
+        "artifact": "contracts MilestoneRequest.done, data-model.md, tasks.md T024/T055",
+        "issue": "PUT semantics for omitted optional fields undefined; create-as-DONE completedAt",
+        "fix": "Omitted optional enum/boolean kept on PUT; default removed from MilestoneRequest.done; completedAt set if created DONE"
+      },
+      {
+        "id": "I1",
+        "severity": "LOW",
+        "artifact": "spec.md FR-017",
+        "issue": "plan status said 'stored' though derived",
+        "fix": "Status derived per FR-021, not stored"
+      },
+      {
+        "id": "A1",
+        "severity": "LOW",
+        "artifact": "tasks.md T096",
+        "issue": "habit summary card metric ambiguous for weekly habits",
+        "fix": "Count of today[] with doneForCurrentPeriod / active"
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "time": "2026-10-03T18:10:07+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T024/T070/T032",
+        "issue": "complete on already-DONE task could overwrite completedAt (dashboard completed-today miscount)",
+        "fix": "complete idempotent; plan item uses TaskService.complete; test added"
+      },
+      {
+        "id": "F2",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T045 (T096 inherits)",
+        "issue": "weekly 'toggle off' impossible when toggle bound to completedToday",
+        "fix": "Undo button on 'done this week' badge; toggle records today"
+      },
+      {
+        "id": "F3",
+        "severity": "LOW",
+        "artifact": "tasks.md T055, data-model.md",
+        "issue": "milestone created done gets no completedAt",
+        "fix": "completedAt set if created done"
+      },
+      {
+        "id": "F4",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T105",
+        "issue": "FR-032 duration/non-blocking/responsive not tested",
+        "fix": "browser_resize 375/1440, computed durations \u2264 250 ms, clickable during animation; traces FR-032"
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "time": "2026-10-03T18:14:26+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "C1",
+        "severity": "HIGH",
+        "artifact": "tasks.md response DTO tasks + swagger checks T026/T042/T057/T073/T085/T094/T102",
+        "issue": "contract required lists not reproduced by springdoc \u2192 generated client makes all fields optional",
+        "fix": "@Schema(requiredMode=REQUIRED) on contract-required fields; swagger checks include schema properties and required lists"
+      },
+      {
+        "id": "I1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T003",
+        "issue": "test resources application.yaml would shadow main application.yaml",
+        "fix": "Use test application.properties with spring.profiles.active=test"
+      },
+      {
+        "id": "A1",
+        "severity": "LOW",
+        "artifact": "tasks.md T055/T062",
+        "issue": "status recompute trigger vs FR-016 (title-only update)",
+        "fix": "Recompute only on add/delete/done change"
+      }
+    ],
+    "infra_fixes": [
+      "loop-1 Loop-instructions step 6: swagger comparison covers schemas and required lists"
+    ]
+  },
+  {
+    "round": 6,
+    "time": "2026-10-03T18:17:31+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "R6-1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T069/T007/T080",
+        "issue": "request DTO required fields (PlanRequest ints, PlanItemSource, PlanItemUpdateRequest.done, FieldError) not marked required \u2192 swagger required lists drift and missing fields pass validation",
+        "fix": "@NotNull boxed types, @Valid items, @NotNull on PlanItemSource and done; FieldError requiredMode; tests for missing fields"
+      }
+    ]
+  },
+  {
+    "round": 7,
+    "time": "2026-10-03T18:19:36+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T080",
+        "issue": "request-DTO 400 cases placed in PlanServiceTest (bean validation runs at controller)",
+        "fix": "Moved DTO validation cases to PlanControllerTest; service test keeps service-level rules"
+      }
+    ]
+  },
+  {
+    "round": 8,
+    "time": "2026-10-03T18:21:38+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "R8-1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T048/T063",
+        "issue": "habit and learning request-DTO validation untested",
+        "fix": "Controller test cases listed for both"
+      },
+      {
+        "id": "R8-2",
+        "severity": "LOW",
+        "artifact": "tasks.md T039",
+        "issue": "'not in future' on DTO would use system clock (constitution V)",
+        "fix": "Rule only in HabitService with injected Clock"
+      }
+    ]
+  },
+  {
+    "round": 9,
+    "time": "2026-10-03T18:23:53+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [
+      {
+        "id": "R9-1",
+        "severity": "MEDIUM",
+        "artifact": "tasks.md T007/T018/T040/T071",
+        "issue": "service-raised 400s had no field mapping for errors[]",
+        "fix": "BadRequestException(field, message) mapped by ApiExceptionHandler; used for date, endDateTime, items"
+      },
+      {
+        "id": "R9-2",
+        "severity": "LOW",
+        "artifact": "tasks.md T089/T084",
+        "issue": "settings missing-field validation untested",
+        "fix": "Controller test cases for missing fields; @NotNull boxed Booleans"
+      }
+    ]
+  },
+  {
+    "round": 10,
+    "time": "2026-10-03T18:25:51+03:00",
+    "analyst": "independent Explore agent",
+    "findings": [],
+    "result": "No findings; coverage 100% (45/45), 0 critical",
+    "infra_fixes": [
+      "plan.md structure tree: common/ lists BadRequestException, FieldErrorDto, Problem"
+    ]
+  }
+]

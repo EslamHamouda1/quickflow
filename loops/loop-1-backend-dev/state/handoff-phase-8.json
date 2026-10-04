@@ -1,0 +1,21 @@
+{
+  "loop": "backend-dev",
+  "phase": 8,
+  "mode": "implement",
+  "trial": 0,
+  "status": "done",
+  "backend_url": "http://localhost:8080",
+  "swagger_url": "http://localhost:8080/v3/api-docs",
+  "swagger_ui": "http://localhost:8080/swagger-ui/index.html",
+  "swagger_file": "backend/openapi/openapi.json",
+  "phase_file": "loops/loop-1-backend-dev/outputs/phase-8-backend.md",
+  "tasks_done": [
+    "T101",
+    "T102"
+  ],
+  "tasks_open": [],
+  "bugs_fixed": [],
+  "started": "2026-10-04T00:37:29+03:00",
+  "ended": "2026-10-04T00:40:20+03:00",
+  "notes": "T101: with 1,000 seeded tasks, every GET /api/tasks search/filter/sort combination took 1-8 ms and the dashboard 14 ms. The index task(archived,status,due_date) already existed. Seed data was deleted. T102: the regenerated and live swagger match contracts/openapi.yaml (37/37 operations, 34/34 schemas, 0 mismatches). No code changes; mvnw verify passes; backend still running."
+}
